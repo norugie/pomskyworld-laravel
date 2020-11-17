@@ -1,5 +1,5 @@
 @extends ( 'layout.layout' )
 
 @section ( 'content' )
-meh
+meh on my mac
 @endsection
