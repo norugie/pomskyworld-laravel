@@ -15,6 +15,9 @@ class CreateBreedsTable extends Migration
     {
         Schema::create('breeds', function (Blueprint $table) {
             $table->id();
+            $table->string('breed_name');
+            $table->text('breed_desc');
+            $table->enum('breed_status', ['Active', 'Inactive']);
             $table->timestamps();
         });
     }

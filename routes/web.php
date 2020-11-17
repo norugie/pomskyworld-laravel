@@ -23,3 +23,6 @@ Route::get( '/pomsky', function () {
 });
 
 // Site content here
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
