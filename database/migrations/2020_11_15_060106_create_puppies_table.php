@@ -15,6 +15,10 @@ class CreatePuppiesTable extends Migration
     {
         Schema::create('puppies', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('breed_id')->constrained();
+            $table->string('puppy_name');
+            $table->text('puppy_desc');
+            $table->enum('puppy_status', ['Available', 'Adopted']);
             $table->timestamps();
         });
     }

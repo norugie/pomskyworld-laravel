@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePuppyParentTable extends Migration
+class CreateFamilyPuppyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreatePuppyParentTable extends Migration
      */
     public function up()
     {
-        Schema::create('category_product', function (Blueprint $table) {
+        Schema::create('family_puppy', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('puppy_id')->constrained();
+            $table->foreignId('family_id')->constrained();
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreatePuppyParentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category_product');
+        Schema::dropIfExists('family_puppy');
     }
 }
