@@ -10,12 +10,13 @@
     </ul>
     <ul class="c-header-nav mfs-auto">
         <li class="c-header-nav-item px-3 c-d-legacy-none">
-            <a class="c-class-toggler c-header-nav-btn" href="{{ route('logout') }}"
+            <a class="c-header-nav-btn" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();"
                 role="button">
                 <i class="fa fa-sign-out"></i> &nbsp;Logout
             </a>
+
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
