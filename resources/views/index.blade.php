@@ -26,7 +26,7 @@
                                         Officia dolor cillum enim nostrud eu ullamco elit cupidatat do cillum.
                                     </p>
                                     <div class="clear"></div>
-                                    <a href="javascript:void();" class="tms-caption scroll-link button rounded large text-small text-uppercase border-white color-white bkg-hover-blue-light color-hover-white"
+                                    <a href="/available-puppies" class="tms-caption button rounded large text-small text-uppercase border-white color-white bkg-hover-blue-light color-hover-white"
                                         data-offset="-20"
                                         data-animate-in="preset:slideInUpShort;duration:800ms;delay:1000ms;"
                                         data-no-scale>
@@ -58,7 +58,7 @@
                                         Labore consectetur anim cupidatat consequat qui ut officia.
                                     </p>
                                     <div class="clear"></div>
-                                    <a href="javascript:void();" class="tms-caption scroll-link button rounded large text-small text-uppercase border-white color-white bkg-hover-blue-light color-hover-white"
+                                    <a href="/contact" class="tms-caption button rounded large text-small text-uppercase border-white color-white bkg-hover-blue-light color-hover-white"
                                         data-offset="-20"
                                         data-animate-in="preset:slideInUpShort;duration:800ms;delay:1000ms;"
                                         data-no-scale>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGuardiansTable extends Migration
+class CreateFamiliesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateGuardiansTable extends Migration
      */
     public function up()
     {
-        Schema::create('guardians', function (Blueprint $table) {
+        Schema::create('families', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('puppy_id')->constrained();
-            $table->string('guardian_name');
-            $table->text('guardian_note')->nullable();
-            $table->date('adoption_date');
+            $table->string('family_name');
+            $table->text('family_desc');
+            $table->enum('family_status', ['Active', 'Inactive']);
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateGuardiansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('guardians');
+        Schema::dropIfExists('families');
     }
 }

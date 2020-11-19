@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFamiliesTable extends Migration
+class CreateTestimonialsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateFamiliesTable extends Migration
      */
     public function up()
     {
-        Schema::create('families', function (Blueprint $table) {
+        Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('breed_id')->constrained();
-            $table->string('family_name');
-            $table->text('family_desc');
-            $table->enum('family_status', ['Active', 'Inactive']);
+            $table->string('testimonial_name');
+            $table->text('testimonial_desc');
+            $table->enum('testimonial_status', ['Active', 'Inactive']);
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateFamiliesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('families');
+        Schema::dropIfExists('testimonials');
     }
 }

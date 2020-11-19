@@ -1,5 +1,5 @@
 @extends ( 'layouts.layout' )
 
 @section ( 'content' )
-pomsky page
+testimonials page
 @endsection
