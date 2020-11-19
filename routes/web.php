@@ -23,6 +23,8 @@ Route::get( '/pomsky', function () {
 });
 
 // Site content here
+
+// CMS content here
 Auth::routes();
 
 Route::get('/cms/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

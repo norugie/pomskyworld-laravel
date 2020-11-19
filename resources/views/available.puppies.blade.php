@@ -1,5 +1,5 @@
 @extends ( 'layouts.layout' )
 
 @section ( 'content' )
-pomsky page
+available puppies page
 @endsection

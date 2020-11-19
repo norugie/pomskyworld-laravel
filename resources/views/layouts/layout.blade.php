@@ -52,63 +52,55 @@
 							<a href="/">Home</a>
 						</li>
 						<li>
-							<a href="javascript:void(0);" class="contains-sub-menu">Breed</a>
+							<a href="/pomsky" class="contains-sub-menu">What is a Pomsky?</a>
+						</li>
+						<li>
+							<a href="/photos">Photos</a>
+                        </li>
+						<li>
+							<a href="/available-puppies" class="contains-sub-menu">Puppies</a>
 							<ul class="sub-menu">
 								<li>
-									<a href="javascript:void(0);">Breed 1</a>
+									<a href="/available-puppies">Available Puppies</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Breed 2</a>
+									<a href="/previous-puppies">Previous Puppies</a>
+								</li>
+								<li>
+									<a href="/testimonials">Testimonials</a>
+								</li>
+							</ul>
+                        </li>
+                        <li>
+							<a href="/parents">Parents</a>
+						</li>
+						<li>
+							<a href="/guarantee" class="contains-sub-menu">Adoptions</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="/guarantee">Health Guarantee</a>
+								</li>
+								<li>
+									<a href="/prices">Adoption Prices</a>
+								</li>
+								<li>
+									<a href="/qualifications">Adoption Qualifications</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="javascript:void(0);">Photos</a>
-						</li>
-						<li>
-							<a href="javascript:void(0);" class="contains-sub-menu">Puppies</a>
+							<a href="/about" class="contains-sub-menu">Info</a>
 							<ul class="sub-menu">
+                                <li>
+                                    <a href="/about">About Us</a>
+                                </li>
 								<li>
-									<a href="javascript:void(0);">Available Puppies</a>
-								</li>
-								<li>
-									<a href="javascript:void(0);">Previous Puppies</a>
-								</li>
-								<li>
-									<a href="javascript:void(0);">Testimonials</a>
+									<a href="/faq">Frequently Asked Questions</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="javascript:void(0);" class="contains-sub-menu">Adoptions</a>
-							<ul class="sub-menu">
-								<li>
-									<a href="javascript:void(0);">Health Guarantee</a>
-								</li>
-								<li>
-									<a href="javascript:void(0);">Adoption Prices</a>
-								</li>
-								<li>
-									<a href="javascript:void(0);">Adoption Qualifications</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="javascript:void(0);" class="contains-sub-menu">Info</a>
-							<ul class="sub-menu">
-								<li>
-									<a href="javascript:void(0);">Frequently Asked Questions</a>
-								</li>
-								<li>
-									<a href="javascript:void(0);">Shipping</a>
-								</li>
-								<li>
-									<a href="javascript:void(0);">News</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="javascript:void(0);">Contact</a>
+							<a href="/contact">Contact Us</a>
 						</li>
 					</ul>
 				</nav>
@@ -148,64 +140,56 @@
                                         <li class="current">
                                             <a href="/">Home</a>
                                         </li>
+                                        <li>
+                                            <a href="/pomsky">What is a Pomsky?</a>
+                                        </li>
+                                        <li>
+                                            <a href="/photos">Photos</a>
+                                        </li>
                                         <li class="contains-sub-menu">
-                                            <a href="javascript:void(0);">Breed</a>
+                                            <a href="/available-puppies">Puppies</a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="javascript:void(0);">Breed 1</a>
+                                                    <a href="/available-puppies">Available Puppies</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">Breed 2</a>
+                                                    <a href="/previous-puppies">Previous Puppies</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/testimonials">Testimonials</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="javascript:void(0);">Photos</a>
+                                            <a href="/parents">Parents</a>
                                         </li>
                                         <li class="contains-sub-menu">
-                                            <a href="javascript:void(0);">Puppies</a>
+                                            <a href="/guarantee">Adoptions</a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="javascript:void(0);">Available Puppies</a>
+                                                    <a href="/guarantee">Health Guarantee</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">Previous Puppies</a>
+                                                    <a href="/prices">Adoption Prices</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">Testimonials</a>
+                                                    <a href="/qualifications">Adoption Qualifications</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="contains-sub-menu">
-                                            <a href="javascript:void(0);">Adoptions</a>
+                                            <a href="/about">Info</a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="javascript:void(0);">Health Guarantee</a>
+                                                    <a href="/about">About Us</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">Adoption Prices</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);">Adoption Qualifications</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="contains-sub-menu">
-                                            <a href="javascript:void(0);">Info</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="javascript:void(0);">Frequently Asked Questions</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);">Shipping</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);">News</a>
+                                                    <a href="/faq">Frequently Asked Questions</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="javascript:void(0);">Contact</a>
+                                            <a href="/contact">Contact Us</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -240,64 +224,56 @@
                                         <li class="current">
                                             <a href="/">Home</a>
                                         </li>
+                                        <li>
+                                            <a href="/pomsky">What is a Pomsky?</a>
+                                        </li>
+                                        <li>
+                                            <a href="/photos">Photos</a>
+                                        </li>
                                         <li class="contains-sub-menu">
-                                            <a href="javascript:void(0);">Breed</a>
+                                            <a href="/available-puppies">Puppies</a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="javascript:void(0);">Breed 1</a>
+                                                    <a href="/available-puppies">Available Puppies</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">Breed 2</a>
+                                                    <a href="/previous-puppies">Previous Puppies</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/testimonials">Testimonials</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="javascript:void(0);">Photos</a>
+                                            <a href="/parents">Parents</a>
                                         </li>
                                         <li class="contains-sub-menu">
-                                            <a href="javascript:void(0);">Puppies</a>
+                                            <a href="/guarantee">Adoptions</a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="javascript:void(0);">Available Puppies</a>
+                                                    <a href="/guarantee">Health Guarantee</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">Previous Puppies</a>
+                                                    <a href="/prices">Adoption Prices</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">Testimonials</a>
+                                                    <a href="/qualifications">Adoption Qualifications</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="contains-sub-menu">
-                                            <a href="javascript:void(0);">Adoptions</a>
+                                            <a href="/about">Info</a>
                                             <ul class="sub-menu">
                                                 <li>
-                                                    <a href="javascript:void(0);">Health Guarantee</a>
+                                                    <a href="/about">About Us</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">Adoption Prices</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);">Adoption Qualifications</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="contains-sub-menu">
-                                            <a href="javascript:void(0);">Info</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="javascript:void(0);">Frequently Asked Questions</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);">Shipping</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);">News</a>
+                                                    <a href="/faq">Frequently Asked Questions</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="javascript:void(0);">Contact</a>
+                                            <a href="/contact">Contact Us</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -325,7 +301,7 @@
 								<div class="column width-4">
 									<div class="widget">
 										<div class="logo mb-20">
-											<a href="/"><img src="images/logo-dark.png" alt="Faulkner Logo" /></a>
+											<a href="/"><img src="images/logo-dark.png" alt="Pomskyworld Logo" /></a>
 										</div>
 										<address>
 											POMSKYWORLD &amp; Co, Inc.<br>
@@ -341,9 +317,8 @@
 											<div class="widget">
 												<h3 class="widget-title mb-15">Discover</h3>
 												<ul>
-													<li><a href="#">About us</a></li>
-													<li><a href="#">Our team</a></li>
-													<li><a href="#">Privacy Notice</a></li>
+													<li><a href="/about">About us</a></li>
+													<li><a href="/privacy">Privacy Notice</a></li>
 												</ul>
 											</div>
 										</div>
@@ -351,9 +326,8 @@
 											<div class="widget">
 												<h3 class="widget-title mb-15">Support</h3>
 												<ul>
-													<li><a href="#">Contact Us</a></li>
-													<li><a href="#">Frequently Asked Questions</a></li>
-													<li><a href="#">Shipping</a></li>
+													<li><a href="/contact">Contact Us</a></li>
+													<li><a href="/faq">Frequently Asked Questions</a></li>
 												</ul>
 											</div>
 										</div>
