@@ -1,19 +1,36 @@
-<div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
-    <div class="c-sidebar-brand">
-        <img src="/images/logo.png" alt="Pomskyworld logo">
-    </div>
-    <ul class="c-sidebar-nav ps ps--active-y">
-        <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link" href="/cms/dashboard">Dashboard</a>
-        </li>
-        <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link" href="/cms/puppies">Puppies</a>
-        </li>
-        <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link" href="/cms/parents">Parents</a>
-        </li>
-        <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link" href="/cms/testimonials">Testimonials</a>
-        </li>
-    </ul>
-</div>
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-dog"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">POMSKYWORLD</div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="/cms/dashboard">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="/cms/dashboard">
+            <i class="fas fa-fw fa-paw"></i>
+            <span>Puppies</span></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="/cms/dashboard">
+            <i class="fas fa-fw fa-dog"></i>
+            <span>Parents</span></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="/cms/dashboard">
+            <i class="fas fa-fw fa-comments"></i>
+            <span>Testimonials</span></a>
+    </li>
+
+</ul>

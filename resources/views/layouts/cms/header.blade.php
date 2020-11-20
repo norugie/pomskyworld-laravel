@@ -1,25 +1,36 @@
-<header class="c-header c-header-light c-header-fixed">
-    <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
-        <i class="fa fa-bars"></i>
-    </button>
-    <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
-        <i class="fa fa-bars"></i>
-    </button>
-    <ul class="c-header-nav d-md-down-none">
-        <li class="c-header-nav-item px-3">Hello, {{ Auth::user()->name }}</li>
-    </ul>
-    <ul class="c-header-nav mfs-auto">
-        <li class="c-header-nav-item px-3 c-d-legacy-none">
-            <a class="c-header-nav-btn" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();"
-                role="button">
-                <i class="fa fa-sign-out"></i> &nbsp;Logout
-            </a>
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
+    <!-- Sidebar Toggle (Topbar) -->
+    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+    </button>
+
+    <!-- Topbar Navbar -->
+    <ul class="navbar-nav ml-auto">
+
+        <div class="topbar-divider d-none d-sm-block"></div>
+
+        <!-- Nav Item - User Information -->
+        <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">&nbsp;{{ Auth::user()->name }}</span>
+            </a>
+            <!-- Dropdown - User Information -->
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Account Settings
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                </a>
+            </div>
         </li>
+
     </ul>
-</header>
+
+</nav>
