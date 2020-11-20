@@ -22,8 +22,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
 	
 	<!-- CSS -->
-	<link rel="stylesheet" href="/css/core.min.css" />
-	<link rel="stylesheet" href="/css/skin.css" />
+	<link rel="stylesheet" href="css/core.min.css" />
+	<link rel="stylesheet" href="css/skin.css" />
 
 	<!-- Author -->
 	<link rel="author" href="/humans.txt">

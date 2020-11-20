@@ -28,3 +28,4 @@ Route::get( '/pomsky', function () {
 Auth::routes();
 
 Route::get('/cms/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/cms/parents', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyList'])->middleware('auth');
