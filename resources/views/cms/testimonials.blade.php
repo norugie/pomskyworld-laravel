@@ -31,7 +31,7 @@
                             <tr>
                                 <td>{{ $testimonial->testimonial_name }}</td>
                                 <td>{{ $testimonial->testimonial_desc }}</td>
-                                <td>{{ $testimonial->created_at }}</td>
+                                <td>{{ $testimonial->created_at->format( 'd M Y' ) }}</td>
                             </tr>        
                         @endforeach
                     </tbody>
