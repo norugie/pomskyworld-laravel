@@ -14,4 +14,14 @@ class FamilyController extends Controller
             'parents' => Family::all()
         ]);
     }
+
+    public function showPuppyFamilyCreateForm ()
+    {
+        return view ( 'cms.create.parents' );
+    }
+
+    public function createPuppyFamily ()
+    {
+        //
+    }
 }

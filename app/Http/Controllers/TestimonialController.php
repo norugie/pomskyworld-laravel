@@ -14,4 +14,14 @@ class TestimonialController extends Controller
             'testimonials' => Testimonial::all()
         ]);
     }
+
+    public function showTestimonialCreateForm ()
+    {
+        return view ( 'cms.create.testimonials' );
+    }
+
+    public function createTestimonial ()
+    {
+        //
+    }
 }

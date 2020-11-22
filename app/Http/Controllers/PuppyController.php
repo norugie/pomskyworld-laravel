@@ -14,4 +14,14 @@ class PuppyController extends Controller
             'puppies' => Puppy::all()
         ]);
     }
+
+    public function showPuppyCreateForm ()
+    {
+        return view ( 'cms.create.puppies' );
+    }
+
+    public function createPuppy ()
+    {
+        //
+    }
 }
