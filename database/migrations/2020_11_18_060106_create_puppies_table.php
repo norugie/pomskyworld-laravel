@@ -16,8 +16,11 @@ class CreatePuppiesTable extends Migration
         Schema::create('puppies', function (Blueprint $table) {
             $table->id();
             $table->string('puppy_name');
+            $table->integer('puppy_age_year');
+            $table->integer('puppy_age_month');
+            $table->enum('puppy_gender', ['Male', 'Female']);
             $table->text('puppy_desc');
-            $table->enum('puppy_status', ['Available', 'Adopted']);
+            $table->enum('puppy_status', ['Available', 'Adopted', 'Inactive']);
             $table->timestamps();
         });
     }

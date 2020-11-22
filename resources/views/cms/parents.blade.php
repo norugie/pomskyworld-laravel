@@ -32,12 +32,12 @@
                     <tbody>
                         @foreach ($parents as $parent)
                             <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011/04/25</td>
-                                <td>$320,800</td>
+                                <td>{{ $parent->family_name }}</td>
+                                <td>{{ $parent->family_gender }}</td>
+                                <td>{{ $parent->family_age_year }} year(s) {{ $parent->family_age_month }} month(s)</td>
+                                <td>{{ $parent->family_status }}</td>
+                                <td><a class="btn btn-success btn-sm">Modify</a></td>
+                                <td><a class="btn btn-danger btn-sm">Change status to Inactive</a></td>
                             </tr>        
                         @endforeach
                     </tbody>
