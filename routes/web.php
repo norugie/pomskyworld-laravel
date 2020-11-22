@@ -30,3 +30,4 @@ Auth::routes();
 Route::get('/cms/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/cms/parents', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyList'])->middleware('auth');
 Route::get('/cms/puppies', [App\Http\Controllers\PuppyController::class, 'showPuppyList'])->middleware('auth');
+Route::get('/cms/testimonials', [App\Http\Controllers\TestimonialController::class, 'showTestimonialList'])->middleware('auth');
