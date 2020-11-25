@@ -14,7 +14,17 @@
     <!-- Parents DataTable -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Puppy Parents List</h6>
+            <div class="row">
+                <div class="col-lg-9 col-sm-12"><h4 class="m-0 font-weight-bold text-primary">Puppy Parents - List</h4></div>
+                <div class="col-lg-3 col-sm-12">
+                    <a href="/cms/parents/create" class="btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="text">Add parent</span>
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -36,8 +46,22 @@
                                 <td>{{ $parent->family_gender }}</td>
                                 <td>{{ $parent->family_age_year }} year(s) {{ $parent->family_age_month }} month(s)</td>
                                 <td>{{ $parent->family_status }}</td>
-                                <td><a class="btn btn-success btn-sm">Modify</a></td>
-                                <td><a class="btn btn-danger btn-sm">Change status to Inactive</a></td>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-success btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-edit"></i>
+                                        </span>
+                                        <span class="text">Modify</span>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="#" class="btn @if( $parent->status == 'Inactive' ) btn-info @else btn-danger @endif btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-info"></i>
+                                        </span>
+                                        <span class="text">Change status: @if( $parent->status == 'Inactive' ) Active @else Inactive @endif</span>
+                                    </a>
+                                </td>
                             </tr>        
                         @endforeach
                     </tbody>
