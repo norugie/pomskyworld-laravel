@@ -48,7 +48,7 @@
 				</div>
 				<nav class="side-navigation nav-block">
 					<ul>
-						<li class="current">
+						<li>
 							<a href="/">Home</a>
 						</li>
 						<li>
@@ -116,90 +116,9 @@
             @if( Request::is( '/' ) )
                 {{-- Navbar for index page --}}
                 <header class="header header-absolute header-fixed-on-mobile header-transparent" data-helper-in-threshold="200" data-helper-out-threshold="500" data-sticky-threshold="200" data-bkg-threshold="100" data-compact-threshold="100">
-                    <div class="header-inner">
-                        <div class="row nav-bar">
-                            <div class="column width-12 nav-bar-inner">
-                                <div class="logo">
-                                    <div class="logo-inner">
-                                        <a href="/"><img src="images/logo-dark.png" alt="Pomskyworld Logo" /></a>
-                                        <a href="/"><img src="images/logo.png" alt="Pomskyworld Logo" /></a>
-                                    </div>
-                                </div>
-                                <nav class="navigation nav-block secondary-navigation nav-right">
-                                    <ul>
-                                        <li class="aux-navigation hide">
-                                            <!-- Aux Navigation -->
-                                            <a href="#" class="navigation-show side-nav-show nav-icon">
-                                                <span class="icon-menu"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <nav class="navigation nav-block primary-navigation nav-right">
-                                    <ul>
-                                        <li class="current">
-                                            <a href="/">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="/pomsky">What is a Pomsky?</a>
-                                        </li>
-                                        <li>
-                                            <a href="/photos">Photos</a>
-                                        </li>
-                                        <li class="contains-sub-menu">
-                                            <a href="/available-puppies">Puppies</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="/available-puppies">Available Puppies</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/previous-puppies">Previous Puppies</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/testimonials">Testimonials</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="/parents">Parents</a>
-                                        </li>
-                                        <li class="contains-sub-menu">
-                                            <a href="/guarantee">Adoptions</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="/guarantee">Health Guarantee</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/prices">Adoption Prices</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/qualifications">Adoption Qualifications</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="contains-sub-menu">
-                                            <a href="/about">Info</a>
-                                            <ul class="sub-menu">
-                                                <li>
-                                                    <a href="/about">About Us</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/faq">Frequently Asked Questions</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="/contact">Contact Us</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-            @else
-                {{-- Navbar for non-index page --}}
+            @else 
                 <header class="header header-relative header-fixed-on-mobile nav-dark" data-bkg-threshold="100" data-sticky-threshold="0">
+            @endif
                     <div class="header-inner">
                         <div class="row nav-bar">
                             <div class="column width-12 nav-bar-inner">
@@ -221,16 +140,16 @@
                                 </nav>
                                 <nav class="navigation nav-block primary-navigation nav-right">
                                     <ul>
-                                        <li class="current">
+                                        <li class="{{ Request::is( '/' ) ? 'current' : '' }}">
                                             <a href="/">Home</a>
                                         </li>
-                                        <li>
+                                        <li class="{{ Request::is( 'pomsky' ) ? 'current' : '' }}">
                                             <a href="/pomsky">What is a Pomsky?</a>
                                         </li>
-                                        <li>
+                                        <li class="{{ Request::is( 'photos' ) ? 'current' : '' }}">
                                             <a href="/photos">Photos</a>
                                         </li>
-                                        <li class="contains-sub-menu">
+                                        <li class="contains-sub-menu {{ Request::is( 'available-puppies' ) || Request::is( 'previous-puppies' ) || Request::is( 'testimonials' ) ? 'current' : '' }}">
                                             <a href="/available-puppies">Puppies</a>
                                             <ul class="sub-menu">
                                                 <li>
@@ -244,10 +163,10 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li>
+                                        <li class="{{ Request::is( 'parents' ) ? 'current' : '' }}">
                                             <a href="/parents">Parents</a>
                                         </li>
-                                        <li class="contains-sub-menu">
+                                        <li class="contains-sub-menu {{ Request::is( 'guarantee' ) || Request::is( 'prices' ) || Request::is( 'qualifications' ) ? 'current' : '' }}">
                                             <a href="/guarantee">Adoptions</a>
                                             <ul class="sub-menu">
                                                 <li>
@@ -261,7 +180,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="contains-sub-menu">
+                                        <li class="contains-sub-menu {{ Request::is( 'about' ) || Request::is( 'faq' ) ? 'current' : '' }}">
                                             <a href="/about">Info</a>
                                             <ul class="sub-menu">
                                                 <li>
@@ -272,7 +191,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li>
+                                        <li class="{{ Request::is( 'contact' ) ? 'current' : '' }}">
                                             <a href="/contact">Contact Us</a>
                                         </li>
                                     </ul>
@@ -281,7 +200,6 @@
                         </div>
                     </div>
                 </header>
-            @endif
 			<!-- Header End -->
 
 			<!-- Content -->
