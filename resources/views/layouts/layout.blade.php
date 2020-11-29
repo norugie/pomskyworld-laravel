@@ -52,7 +52,7 @@
 							<a href="/">Home</a>
 						</li>
 						<li>
-							<a href="/pomsky" class="contains-sub-menu">What is a Pomsky?</a>
+							<a href="/pomsky">What is a Pomsky?</a>
 						</li>
 						<li>
 							<a href="/photos">Photos</a>

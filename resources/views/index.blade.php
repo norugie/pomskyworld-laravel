@@ -36,7 +36,7 @@
                             </div>
                         </div>
                     </div>
-                    <img data-src="images/slider/pomsky-bg-1.jpg" data-retina src="images/blank.png" alt=""/>
+                    <img data-src="images/assets/slider/pomsky-bg-1.jpg" data-retina src="images/blank.png" alt=""/>
                 </li>
                 <li class="tms-slide" data-image data-as-bkg-image data-force-fit data-overlay-bkg-color="#333333" data-overlay-bkg-opacity="0.6" data-animation="slideLeftRight">
                     <div class="tms-content">
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                     </div>
-                    <img data-src="images/slider/pomsky-bg-2.jpg" data-retina src="images/blank.png" alt=""/>
+                    <img data-src="images/assets/slider/pomsky-bg-2.jpg" data-retina src="images/blank.png" alt=""/>
                 </li>
             </ul>
         </div>
