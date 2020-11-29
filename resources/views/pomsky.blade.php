@@ -89,21 +89,21 @@
 				<div class="column width-12">
 					<h3 class="post-title">Markings and Colour</h3>
 					<p class="lead">Eu nostrud minim voluptate aliquip. Nulla aute adipisicing sit duis eu eiusmod voluptate officia adipisicing minim culpa ea et do. Quis minim mollit elit esse do esse laborum ea officia. Fugiat exercitation voluptate occaecat dolore amet non ea velit non excepteur Lorem. Amet eu Lorem duis ullamco reprehenderit.</p>
-					<div class="grid-container fade-in-progressively no-padding-top" data-grid-ratio="1" data-animate-resize="" data-animate-resize-duration="0">
+					<div class="grid-container fade-in-progressively no-padding-top" data-grid-ratio="1" data-animate-resize data-animate-resize-duration="0">
 						<div class="row">
 							<div class="column width-12">
-								<div class="row grid content-grid-3" style="position: relative; height: 450px; visibility: visible; min-height: initial;">
-									<div class="grid-item animate-in" style="position: absolute; left: 0px; top: 0px;">
+								<div class="row grid content-grid-3">
+									<div class="grid-item">
 										<div class="thumbnail rounded img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500">
-											<a class="overlay-link lightbox-link" data-toolbar="zoom" data-group="pomsky-marking-1" data-image-url="images/assets/about/pomsky-marking-1.jpg" href="images/assets/about/pomsky-marking-1.jpg" data-lightbox-animation="fadeIn" id="pomsky-marking-1-tml-thumb-1">
-												<img src="images/assets/about/pomsky-marking-1.jpg" alt="" style="transition-duration: 500ms;">
+											<a class="overlay-link lightbox-link" data-group="pomsky-marking-1" data-image-url="images/assets/about/pomsky-marking-1.jpg" href="images/assets/about/pomsky-marking-1.jpg" data-lightbox-animation="fadeIn">
+												<img src="images/assets/about/pomsky-marking-1.jpg" alt=""/>
 											</a>
 										</div>
 									</div>
-									<div class="grid-item animate-in" style="position: absolute; left: 379px; top: 0px;">
-										<div class="thumbnail rounded img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700">
-											<a class="overlay-link lightbox-link" data-toolbar="zoom" data-group="pomsky-marking-1" data-image-url="images/assets/about/pomsky-marking-2.jpg" href="images/assets/about/pomsky-marking-2.jpg" data-lightbox-animation="fadeIn" id="pomsky-marking-1-tml-thumb-2">
-												<img src="images/assets/about/pomsky-marking-2.jpg" alt="" style="transition-duration: 700ms;">
+									<div class="grid-item">
+										<div class="thumbnail rounded img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500">
+											<a class="overlay-link lightbox-link" data-group="pomsky-marking-1" data-image-url="images/assets/about/pomsky-marking-2.jpg" href="images/assets/about/pomsky-marking-2.jpg" data-lightbox-animation="fadeIn">
+												<img src="images/assets/about/pomsky-marking-2.jpg" alt=""/>
 											</a>
 										</div>
 									</div>
@@ -117,21 +117,21 @@
 				<div class="column width-12">
 					<h3 class="post-title">Eye Colour</h3>
 					<p class="lead">Eu nostrud minim voluptate aliquip. Nulla aute adipisicing sit duis eu eiusmod voluptate officia adipisicing minim culpa ea et do. Quis minim mollit elit esse do esse laborum ea officia. Fugiat exercitation voluptate occaecat dolore amet non ea velit non excepteur Lorem. Amet eu Lorem duis ullamco reprehenderit.</p>
-					<div class="grid-container fade-in-progressively no-padding-top" data-grid-ratio="1" data-animate-resize="" data-animate-resize-duration="0">
+					<div class="grid-container fade-in-progressively no-padding-top" data-grid-ratio="1" data-animate-resize data-animate-resize-duration="0">
 						<div class="row">
 							<div class="column width-12">
-								<div class="row grid content-grid-3" style="position: relative; height: 450px; visibility: visible; min-height: initial;">
-									<div class="grid-item animate-in" style="position: absolute; left: 0px; top: 0px;">
+								<div class="row grid content-grid-3">
+									<div class="grid-item">
 										<div class="thumbnail rounded img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500">
-											<a class="overlay-link lightbox-link" data-toolbar="zoom" data-group="pomsky-eye-1" data-image-url="images/assets/about/pomsky-eye-1.jpg" href="images/assets/about/pomsky-eye-1.jpg" data-lightbox-animation="fadeIn" id="pomsky-eye-1-tml-thumb-1">
-												<img src="images/assets/about/pomsky-eye-1.jpg" alt="" style="transition-duration: 500ms;">
+											<a class="overlay-link lightbox-link" data-group="pomsky-eye-1" data-image-url="images/assets/about/pomsky-eye-1.jpg" href="images/assets/about/pomsky-eye-1.jpg" data-lightbox-animation="fadeIn">
+												<img src="images/assets/about/pomsky-eye-1.jpg" alt=""/>
 											</a>
 										</div>
 									</div>
-									<div class="grid-item animate-in" style="position: absolute; left: 379px; top: 0px;">
-										<div class="thumbnail rounded img-scale-in" data-hover-easing="easeInOut" data-hover-speed="700">
-											<a class="overlay-link lightbox-link" data-toolbar="zoom" data-group="pomsky-eye-1" data-image-url="images/assets/about/pomsky-eye-2.jpg" href="images/assets/about/pomsky-eye-2.jpg" data-lightbox-animation="fadeIn" id="pomsky-eye-1-tml-thumb-2">
-												<img src="images/assets/about/pomsky-eye-2.jpg" alt="" style="transition-duration: 700ms;">
+									<div class="grid-item">
+										<div class="thumbnail rounded img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500">
+											<a class="overlay-link lightbox-link" data-group="pomsky-eye-1" data-image-url="images/assets/about/pomsky-eye-2.jpg" href="images/assets/about/pomsky-eye-2.jpg" data-lightbox-animation="fadeIn">
+												<img src="images/assets/about/pomsky-eye-2.jpg" alt=""/>
 											</a>
 										</div>
 									</div>

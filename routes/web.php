@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Home page
+// Site content here
 Route::get( '/', function () {
     return view( 'index' );
 });
@@ -22,7 +22,9 @@ Route::get( '/pomsky', function () {
     return view( 'pomsky' );
 });
 
-// Site content here
+Route::get( '/photos', function () {
+    return view( 'photos' );
+});
 
 // CMS content here
 Auth::routes();
