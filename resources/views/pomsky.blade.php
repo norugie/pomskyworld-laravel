@@ -170,7 +170,7 @@
 			<p class="lead mb-0 mb-mobile-20 color-white">Want a pomsky? Check out our "Available Puppies" section now.</p>
 		</div>
 		<div class="column width-4 v-align-middle right left-on-mobile ">
-			<div>
+			<div class="center-on-mobile">
 				<a href="/available-puppies" class="button rounded medium no-margins bkg-white bkg-hover-white color-blue-light color-hover-blue-light">Available Puppies</a>
 			</div>
 		</div>

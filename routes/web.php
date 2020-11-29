@@ -26,6 +26,18 @@ Route::get( '/photos', function () {
     return view( 'photos' );
 });
 
+Route::get( '/available-puppies', function () {
+    return view( 'available' );
+});
+
+Route::get( '/previous-puppies', function () {
+    return view( 'previous' );
+});
+
+Route::get( '/testimonials', function () {
+    return view( 'testimonials' );
+});
+
 // CMS content here
 Auth::routes();
 

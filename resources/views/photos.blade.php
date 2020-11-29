@@ -5,8 +5,8 @@
 <div class="section-block replicable-content">
     <div class="row">
         <div class="column width-12 center">
-            <h3>Pomsky Gallery</h3>
-            <p class="mb-50">Duis veniam proident tempor anim id fugiat. Aliquip deserunt ipsum cillum aliqua amet et exercitation Lorem.</p>
+            <h3 class="post-title">Pomsky Gallery</h3>
+            <p class="lead mb-50">Duis veniam proident tempor anim id fugiat. Aliquip deserunt ipsum cillum aliqua amet et exercitation Lorem.</p>
 
             <!-- Pomsky Grid -->
             <div class="grid-container fade-in-progressively no-padding-top" data-grid-ratio="1" data-animate-resize data-animate-resize-duration="0">
