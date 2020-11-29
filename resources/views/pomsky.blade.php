@@ -58,7 +58,7 @@
 					<p class="lead">Eu nostrud minim voluptate aliquip. Nulla aute adipisicing sit duis eu eiusmod voluptate officia adipisicing minim culpa ea et do. Quis minim mollit elit esse do esse laborum ea officia. Fugiat exercitation voluptate occaecat dolore amet non ea velit non excepteur Lorem. Amet eu Lorem duis ullamco reprehenderit.</p>
 					<span class="progress-bar-label">Temperament 100%</span>
 					<div class="progress-bar rounded small bkg-white tmh-perspective">
-						<div class="bar bkg-blue-light color-white percent-100" data-animate-in="transX:-100%;duration:1000ms;easing:easeIn;" style="backface-visibility: hidden; transition: -webkit-transform 1000ms ease 0s, opacity; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); opacity: 1; visibility: visible; transform-origin: 50% 50% 0px;">
+						<div class="bar bkg-blue-light color-white percent-100">
 						</div>
 					</div>
 				</div>
@@ -69,7 +69,7 @@
 					<p class="lead">Eu nostrud minim voluptate aliquip. Nulla aute adipisicing sit duis eu eiusmod voluptate officia adipisicing minim culpa ea et do. Quis minim mollit elit esse do esse laborum ea officia. Fugiat exercitation voluptate occaecat dolore amet non ea velit non excepteur Lorem. Amet eu Lorem duis ullamco reprehenderit.</p>
 					<span class="progress-bar-label">Intelligence 100%</span>
 					<div class="progress-bar rounded small bkg-white tmh-perspective">
-						<div class="bar bkg-blue-light color-white percent-100 horizon" data-animate-in="transX:-100%;duration:1000ms;easing:easeIn;" style="backface-visibility: hidden; transition: -webkit-transform 1000ms ease 0s, opacity; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); opacity: 1; visibility: visible; transform-origin: 50% 50% 0px;">
+						<div class="bar bkg-blue-light color-white percent-100">
 						</div>
 					</div>
 				</div>
@@ -78,9 +78,9 @@
 				<div class="column width-12">
 					<h3 class="post-title">Energy Level</h3>
 					<p class="lead">Eu nostrud minim voluptate aliquip. Nulla aute adipisicing sit duis eu eiusmod voluptate officia adipisicing minim culpa ea et do. Quis minim mollit elit esse do esse laborum ea officia. Fugiat exercitation voluptate occaecat dolore amet non ea velit non excepteur Lorem. Amet eu Lorem duis ullamco reprehenderit.</p>
-					<span class="progress-bar-label">Energy Level 70%</span>
+					<span class="progress-bar-label">Energy Level 65%</span>
 					<div class="progress-bar rounded small bkg-white tmh-perspective">
-						<div class="bar bkg-blue-light color-white percent-70 horizon" data-animate-in="transX:-100%;duration:1000ms;easing:easeIn;" style="backface-visibility: hidden; transition: -webkit-transform 1000ms ease 0s, opacity; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); opacity: 1; visibility: visible; transform-origin: 50% 50% 0px;">
+						<div class="bar bkg-blue-light color-white percent-65">
 						</div>
 					</div>
 				</div>
@@ -95,14 +95,14 @@
 								<div class="row grid content-grid-3">
 									<div class="grid-item">
 										<div class="thumbnail rounded img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500">
-											<a class="overlay-link lightbox-link" data-group="pomsky-marking-1" data-image-url="images/assets/about/pomsky-marking-1.jpg" href="images/assets/about/pomsky-marking-1.jpg" data-lightbox-animation="fadeIn">
+											<a class="lightbox-link" data-toolbar="zoom" data-group="pomsky-marking-1" data-image-url="images/assets/about/pomsky-marking-1.jpg" href="images/assets/about/pomsky-marking-1.jpg" data-lightbox-animation="fadeIn">
 												<img src="images/assets/about/pomsky-marking-1.jpg" alt=""/>
 											</a>
 										</div>
 									</div>
 									<div class="grid-item">
 										<div class="thumbnail rounded img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500">
-											<a class="overlay-link lightbox-link" data-group="pomsky-marking-1" data-image-url="images/assets/about/pomsky-marking-2.jpg" href="images/assets/about/pomsky-marking-2.jpg" data-lightbox-animation="fadeIn">
+											<a class="lightbox-link" data-toolbar="zoom" data-group="pomsky-marking-1" data-image-url="images/assets/about/pomsky-marking-2.jpg" href="images/assets/about/pomsky-marking-2.jpg" data-lightbox-animation="fadeIn">
 												<img src="images/assets/about/pomsky-marking-2.jpg" alt=""/>
 											</a>
 										</div>
@@ -123,14 +123,14 @@
 								<div class="row grid content-grid-3">
 									<div class="grid-item">
 										<div class="thumbnail rounded img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500">
-											<a class="overlay-link lightbox-link" data-group="pomsky-eye-1" data-image-url="images/assets/about/pomsky-eye-1.jpg" href="images/assets/about/pomsky-eye-1.jpg" data-lightbox-animation="fadeIn">
+											<a class="lightbox-link" data-toolbar="zoom" data-group="pomsky-eye-1" data-image-url="images/assets/about/pomsky-eye-1.jpg" href="images/assets/about/pomsky-eye-1.jpg" data-lightbox-animation="fadeIn">
 												<img src="images/assets/about/pomsky-eye-1.jpg" alt=""/>
 											</a>
 										</div>
 									</div>
 									<div class="grid-item">
 										<div class="thumbnail rounded img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500">
-											<a class="overlay-link lightbox-link" data-group="pomsky-eye-1" data-image-url="images/assets/about/pomsky-eye-2.jpg" href="images/assets/about/pomsky-eye-2.jpg" data-lightbox-animation="fadeIn">
+											<a class="lightbox-link" data-toolbar="zoom" data-group="pomsky-eye-1" data-image-url="images/assets/about/pomsky-eye-2.jpg" href="images/assets/about/pomsky-eye-2.jpg" data-lightbox-animation="fadeIn">
 												<img src="images/assets/about/pomsky-eye-2.jpg" alt=""/>
 											</a>
 										</div>
@@ -145,9 +145,9 @@
 				<div class="column width-12">
 					<h3 class="post-title">Fur and Coat</h3>
 					<p class="lead">Eu nostrud minim voluptate aliquip. Nulla aute adipisicing sit duis eu eiusmod voluptate officia adipisicing minim culpa ea et do. Quis minim mollit elit esse do esse laborum ea officia. Fugiat exercitation voluptate occaecat dolore amet non ea velit non excepteur Lorem. Amet eu Lorem duis ullamco reprehenderit.</p>
-					<span class="progress-bar-label">Fur and Coat: Low Maintenance 30%</span>
+					<span class="progress-bar-label">Fur and Coat: Low Maintenance 25%</span>
 					<div class="progress-bar rounded small bkg-white tmh-perspective">
-						<div class="bar bkg-blue-light color-white percent-30 horizon" data-animate-in="transX:-100%;duration:1000ms;easing:easeIn;" style="backface-visibility: hidden; transition: -webkit-transform 1000ms ease 0s, opacity; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); opacity: 1; visibility: visible; transform-origin: 50% 50% 0px;">
+						<div class="bar bkg-blue-light color-white percent-25">
 						</div>
 					</div>
 				</div>
