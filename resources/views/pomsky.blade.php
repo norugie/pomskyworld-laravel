@@ -38,11 +38,6 @@
 		<div class="column width-12">
 			<div class="row">
 				<div class="column width-12">
-
-				</div>
-			</div>
-			<div class="row">
-				<div class="column width-12">
 					<p class="lead">Velit veniam consequat anim duis culpa enim cupidatat ullamco ut et dolore nisi aute. Ipsum culpa adipisicing aliqua reprehenderit quis ea ipsum irure id. Eu nostrud minim voluptate aliquip. Nulla aute adipisicing sit duis eu eiusmod voluptate officia adipisicing minim culpa ea et do. Quis minim mollit elit esse do esse laborum ea officia. Fugiat exercitation voluptate occaecat dolore amet non ea velit non excepteur Lorem. Amet eu Lorem duis ullamco reprehenderit.</p>
 				</div>
 			</div>
