@@ -38,6 +38,34 @@ Route::get( '/testimonials', function () {
     return view( 'testimonials' );
 });
 
+Route::get( '/parents', function () {
+    return view( 'parents' );
+});
+
+Route::get( '/guarantee', function () {
+    return view( 'guarantee' );
+});
+
+Route::get( '/prices', function () {
+    return view( 'prices' );
+});
+
+Route::get( '/qualifications', function () {
+    return view( 'qualifications' );
+});
+
+Route::get( '/about', function () {
+    return view( 'about' );
+});
+
+Route::get( '/faq', function () {
+    return view( 'faq' );
+});
+
+Route::get( '/contact', function () {
+    return view( 'contact' );
+});
+
 // CMS content here
 Auth::routes();
 
