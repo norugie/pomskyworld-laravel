@@ -394,6 +394,9 @@ a[class*="icon-"]:hover {
     .status-code-title {
         font-size: 10.306rem;
     }
+    .text-center {
+        text-align: center !important;
+    }
     /* Helpers */
     .fullscreen-section .background-on-mobile {
         background: #f4f4f4;
