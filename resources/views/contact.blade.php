@@ -77,5 +77,5 @@
 </div>
 <!--Contact Form End -->
 <!-- Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9DLnnwY8lLPEuf6LFGqb9BuGN79CKM8"></script>
 @endsection
