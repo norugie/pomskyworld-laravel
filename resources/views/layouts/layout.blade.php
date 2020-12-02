@@ -235,8 +235,10 @@
 											<div class="widget">
 												<h3 class="widget-title mb-15">Discover</h3>
 												<ul>
-													<li><a href="/about">About us</a></li>
-													<li><a href="/privacy">Privacy Notice</a></li>
+													<li class="color-hover-blue-light"><a href="/about">About us</a></li>
+													<li class="color-hover-blue-light"><a href="/available-puppies">Available Puppies</a></li>
+													<li class="color-hover-blue-light"><a href="/guarantee">Health Guarantee</a></li>
+													<li class="color-hover-blue-light"><a href="/prices">Adoption Prices</a></li>
 												</ul>
 											</div>
 										</div>
@@ -244,8 +246,8 @@
 											<div class="widget">
 												<h3 class="widget-title mb-15">Support</h3>
 												<ul>
-													<li><a href="/contact">Contact Us</a></li>
-													<li><a href="/faq">Frequently Asked Questions</a></li>
+													<li class="color-hover-blue-light"><a href="/contact">Contact Us</a></li>
+													<li class="color-hover-blue-light"><a href="/faq">Frequently Asked Questions</a></li>
 												</ul>
 											</div>
 										</div>
