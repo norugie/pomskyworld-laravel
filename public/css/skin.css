@@ -5557,8 +5557,8 @@ blockquote.avatar.xlarge span img {
 .accordion.line-nav>ul>li.active>a,
 .accordion.line-nav>ul>li.active>a:hover {
     background-color: transparent;
-    border-bottom-color: #2FCA75;
-    color: #2fca74;
+    border-bottom-color: #92d7ef;
+    color: #92d7ef;
 }
 
 .accordion.line-nav .accordion-content {
