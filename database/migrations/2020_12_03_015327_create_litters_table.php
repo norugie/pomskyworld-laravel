@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTestimonialsTable extends Migration
+class CreateLittersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateTestimonialsTable extends Migration
      */
     public function up()
     {
-        Schema::create('testimonials', function (Blueprint $table) {
+        Schema::create('litters', function (Blueprint $table) {
             $table->id();
-            $table->string('testimonial_name');
-            $table->string('testimonial_city');
-            $table->string('testimonial_province');
-            $table->text('testimonial_desc');
-            $table->enum('testimonial_status', ['Active', 'Inactive']);
+            $table->string('litter_name');
+            $table->timestamp('litter_dob');
+            $table->text('litter_desc');
+            $table->enum('litter_status', ['Active', 'Inactive']);
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ class CreateTestimonialsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('testimonials');
+        Schema::dropIfExists('litters');
     }
 }

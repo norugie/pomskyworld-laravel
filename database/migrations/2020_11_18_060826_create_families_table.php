@@ -16,8 +16,7 @@ class CreateFamiliesTable extends Migration
         Schema::create('families', function (Blueprint $table) {
             $table->id();
             $table->string('family_name');
-            $table->integer('family_age_year');
-            $table->integer('family_age_month');
+            $table->timestamp('family_dob');
             $table->enum('family_gender', ['Male', 'Female']);
             $table->text('family_desc');
             $table->enum('family_status', ['Active', 'Inactive']);
