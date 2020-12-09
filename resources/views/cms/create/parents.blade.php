@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="card-body">
-            <form class="needs-validation" action="/create" method="POST" novalidate>
+            <form class="needs-validation" action="/cms/parents/create" method="POST" novalidate>
                 @csrf
                 <div class="row mb-1">
                     <div class="col-lg-4 col-sm-12">
@@ -62,15 +62,15 @@
                         <p class="font-12 small mb-0"><b>Note:</b> Leaving this empty will automatically set the gender to "Male".</p>
                     </div>
                     <div class="col-lg-4 col-sm-12">
-                        <label class="label-emphasis" for="parent_age_years">Parent Age - Years *</label>
+                        <label class="label-emphasis" for="parent_dob">Parent DOB</label>
                         <div class="input-group mb-1">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
                                     <i class="fas fa-calendar"></i>
                                 </span>
                             </div>
-                            <input type="date" value="{{ date('Y-m-d') }}" id="parent_age_years" name="parent_age_years" class="form-control clear-border @error( 'parent_age_years' ) is-invalid @enderror" value="{{ old( 'parent_age_years' ) }}" required>
-                            <div class="invalid-feedback">@error( 'parent_age_years' ){{ $message }}@else You cannot leave this section empty. @enderror</div>
+                            <input type="date" value="{{ date('Y-m-d') }}" max="{{ date('Y-m-d') }}" id="parent_dob" name="parent_dob" class="form-control clear-border @error( 'parent_dob' ) is-invalid @enderror" value="{{ old( 'parent_dob' ) }}" required>
+                            <div class="invalid-feedback">@error( 'parent_dob' ){{ $message }}@else You cannot leave this section empty. @enderror</div>
                         </div>
                         <p class="font-12 small mb-0"><b>Note:</b> Leaving this empty will automatically set the date of birth to the current date.</p>
                     </div>
