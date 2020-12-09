@@ -33,7 +33,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Gender</th>
-                            <th>Age</th>
+                            <th>DOB</th>
                             <th>Status</th>
                             <th>Modify</th>
                             <th>Change Status</th>
@@ -44,7 +44,7 @@
                             <tr>
                                 <td>{{ $parent->family_name }}</td>
                                 <td>{{ $parent->family_gender }}</td>
-                                <td>{{ $parent->family_age_year }} year(s) {{ $parent->family_age_month }} month(s)</td>
+                                <td>{{ $parent->family_dob->format( 'd M Y' ) }}</td>
                                 <td>{{ $parent->family_status }}</td>
                                 <td class="text-center">
                                     <a href="#" class="btn btn-success btn-icon-split">

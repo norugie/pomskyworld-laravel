@@ -23,7 +23,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Gender</th>
-                            <th>Age</th>
+                            <th>DOB</th>
                             <th>Status</th>
                             <th>Modify</th>
                             <th>Change Status</th>
@@ -34,7 +34,7 @@
                             <tr>
                                 <td>{{ $puppy->puppy_name }}</td>
                                 <td>{{ $puppy->puppy_gender }}</td>
-                                <td>{{ $puppy->puppy_age_year }} year(s) {{ $puppy->puppy_age_month }} month(s)</td>
+                                <td>{{ $puppy->puppy_dob->format( 'd M Y' ) }}</td>
                                 <td>{{ $puppy->puppy_status }}</td>
                                 <td><a class="btn btn-success btn-sm">Modify</a></td>
                                 <td><a class="btn btn-danger btn-sm">Change status to Inactive</a></td>
