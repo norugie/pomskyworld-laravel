@@ -9,7 +9,7 @@
 @section('scripts')
     {{-- Additional scripts for page: /create --}}
     <script src="/cms/vendor/dropzone/dist/min/dropzone.min.js"></script>
-    <script src="/cms/js/plugin-config/dropzone.js"></script>
+    <script src="/cms/js/plugin-config/dropzone-family.js"></script>
     <script src="/cms/js/plugin-config/form.js"></script>
 @endsection
 
@@ -87,7 +87,7 @@
                         <div id="dropzone-gallery" class="dropzone">
                             <div class="dz-default dz-message"><h3>Drop images here or click to upload</h3></div>
                         </div>
-                        <input type="text" id="image_name" name="image_name" value="" hidden>
+                        <input type="text" id="image_name" name="image_name" value="">
                     </div>
                 </div>
                 <br>
