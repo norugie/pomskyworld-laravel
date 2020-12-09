@@ -77,7 +77,6 @@ Route::get('/cms/parents', [App\Http\Controllers\FamilyController::class, 'showP
 Route::get('/cms/parents/create', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyCreateForm'])->middleware('auth');
 Route::post('/cms/parents/create', [App\Http\Controllers\FamilyController::class, 'createPuppyFamily'])->middleware('auth');
 
-
 // Puppies
 Route::get('/cms/puppies', [App\Http\Controllers\PuppyController::class, 'showPuppyList'])->middleware('auth');
 Route::get('/cms/puppies/create', [App\Http\Controllers\PuppyController::class, 'showPuppyCreateForm'])->middleware('auth');
@@ -88,3 +87,6 @@ Route::get('/cms/testimonials', [App\Http\Controllers\TestimonialController::cla
 Route::get('/cms/testimonials/create', [App\Http\Controllers\TestimonialController::class, 'showTestimonialCreateForm'])->middleware('auth');
 Route::post('/cms/testimonials/create', [App\Http\Controllers\TestimonialController::class, 'createTestimonial'])->middleware('auth');
 
+// Miscellaneous Routes
+Route::post( '/cms/upload/{type}', [App\Http\Controllers\HomeController::class, 'uploadImage'] )->name('home');
+Route::post( '/cms/delete/{type}', [App\Http\Controllers\HomeController::class, 'deleteImage'] )->name('home');
