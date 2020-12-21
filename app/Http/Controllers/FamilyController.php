@@ -31,16 +31,16 @@ class FamilyController extends Controller
         $image->save();
     }
 
-    public function createPuppyFamily ()
+    public function createPuppyFamily ( Request $request )
     {
         $family = new Family();
         
-        $family->family_name = request( 'parent_name' );
-        $family->family_gender = request( 'gender_select' );
-        $family->family_dob = request( 'parent_dob' );
-        $family->family_desc = request( 'parent_info' );
+        $family->family_name = $request->parent_name;
+        $family->family_gender = $request->gender_select;
+        $family->family_dob = $request->parent_dob;
+        $family->family_desc = $request->parent_info;
 
-        $images = request( 'image_name' );
+        $images = $request->image_name;
         if ( $images ) {
             $image_array = explode( ',', rtrim( $images, ',' ) );
             
@@ -51,7 +51,11 @@ class FamilyController extends Controller
             foreach( $image_array as $image_name ):
                 $this->createPuppyFamilyGallery( $family->id, $image_name );
             endforeach;
-        }
+        } else $family->save(); // Save current family object
+
+        session(['crud' => 'create']);
+        session(['status' => 'success']);
+        session(['message' => 'A family entry has been created successfully.']);
 
         return redirect( '/cms/parents' );
     }
