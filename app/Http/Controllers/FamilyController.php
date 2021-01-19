@@ -57,6 +57,8 @@ class FamilyController extends Controller
         session(['status' => 'success']);
         session(['message' => 'A family entry has been created successfully.']);
 
+        alert()->info('Your form submited successfully ')->autoclose("2000");
+
         return redirect( '/cms/parents' );
     }
 }
