@@ -2,7 +2,6 @@
 
 @section('header')
     {{-- Additional header tags for page: /create --}}
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="/cms/vendor/dropzone/dist/min/dropzone.min.css">
 @endsection
 
@@ -41,8 +40,8 @@
                                     <i class="fas fa-dog"></i>
                                 </span>
                             </div>
-                            <input type="text" id="parent_name" name="parent_name" class="form-control clear-border @error( 'parent_name' ) is-invalid @enderror" value="{{ old( 'parent_name' ) }}" required>
-                            <div class="invalid-feedback">@error( 'parent_name' ){{ $message }}@else You cannot leave this section empty. @enderror</div>
+                            <input type="text" id="parent_name" name="parent_name" class="form-control clear-border @error('parent_name') is-invalid @enderror" value="{{ old('parent_name') }}" required>
+                            <div class="invalid-feedback">@error('parent_name'){{ $message }}@else You cannot leave this section empty. @enderror</div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-12">
@@ -69,16 +68,17 @@
                                     <i class="fas fa-calendar"></i>
                                 </span>
                             </div>
-                            <input type="date" value="{{ date('Y-m-d') }}" max="{{ date('Y-m-d') }}" id="parent_dob" name="parent_dob" class="form-control clear-border @error( 'parent_dob' ) is-invalid @enderror" value="{{ old( 'parent_dob' ) }}" required>
-                            <div class="invalid-feedback">@error( 'parent_dob' ){{ $message }}@else You cannot leave this section empty. @enderror</div>
+                            <input type="date" value="{{ date('Y-m-d') }}" max="{{ date('Y-m-d') }}" id="parent_dob" name="parent_dob" class="form-control clear-border @error('parent_dob') is-invalid @enderror" value="{{ old('parent_dob') }}" required>
+                            <div class="invalid-feedback">@error('parent_dob'){{ $message }}@else You cannot leave this section empty. @enderror</div>
                         </div>
                         <p class="font-12 small mb-0"><b>Note:</b> Leaving this empty will automatically set the date of birth to the current date.</p>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-12">
-                        <label class="label-emphasis" for="parent_info">Parent Information</label>
-                        <textarea id="parent_info" name="parent_info" class="form-control clear-border-textarea editor">{{ old( 'parent_info' ) }}</textarea>
+                        <label class="label-emphasis" for="parent_info">Parent Information *</label>
+                        <textarea id="parent_info" name="parent_info" class="form-control clear-border-textarea @error('parent_dob') is-invalid @enderror" required>{{ old('parent_info') }}</textarea>
+                        <div class="invalid-feedback">@error('parent_dob'){{ $message }}@else You cannot leave this section empty. @enderror</div>
                     </div>
                 </div>
                 <div class="row">
