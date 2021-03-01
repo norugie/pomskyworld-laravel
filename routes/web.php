@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Testing
+Route::get('/test', function(){
+    return view('test');
+});
+
 // Site content here
 Route::get( '/', function () {
     return view( 'index' );
@@ -70,12 +75,13 @@ Route::get( '/contact', function () {
 Auth::routes();
 
 // Dashboard
-Route::get('/cms/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/cms/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 
 // Parents
 Route::get('/cms/parents', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyList'])->middleware('auth');
 Route::get('/cms/parents/create', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyCreateForm'])->middleware('auth');
 Route::post('/cms/parents/create', [App\Http\Controllers\FamilyController::class, 'createPuppyFamily'])->middleware('auth');
+Route::post('/cms/parents/deactivate', [App\Http\Controllers\FamilyController::class, 'deactivatePuppyFamily'])->middleware('auth');
 
 // Puppies
 Route::get('/cms/puppies', [App\Http\Controllers\PuppyController::class, 'showPuppyList'])->middleware('auth');

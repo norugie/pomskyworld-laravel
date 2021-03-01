@@ -8,18 +8,41 @@
     <script src="/cms/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="/cms/vendor/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="/cms/js/plugin-config/datatables-setup.js"></script>
-@endsection
-
-@section('content-alert')
-    @if(session()->exists('crud'))
-        <div class="alert alert-{{ session('status') }} alert-dismissible fade show" role="alert">
-            <strong>{{ strtoupper(session('status')) }}</strong> {{ session('message') }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    @endif
-    @php session()->forget(['crud', 'status', 'message']) @endphp
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
+    <script>
+        $(document).on('click', '.btn-delete-parent', function (e) {
+            e.preventDefault();
+            var id = $(this).data('id');
+            swal({
+                title: "Are you sure you want to delete this entry?",
+                text: "You won't be able to reactivate this entry after this.", 
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDeactivate) => {
+                if (willDeactivate) {
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
+                    $.ajax({
+                        url: "{{ url('/cms/parents/deactivate') }}",
+                        type: "POST",
+                        data: { id: id },
+                        dataType: "html",
+                        success: function () {
+                            window.location.href = "{{ url('/cms/parents') }}";
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            swal("Error deactivating!", "Please try again", "error");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 @endsection
 
 @section('content')
@@ -56,7 +79,7 @@
                             <tr>
                                 <td>{{ $parent->family_name }}</td>
                                 <td>{{ $parent->family_gender }}</td>
-                                <td>{{ $parent->family_dob->format( 'd M Y' ) }}</td>
+                                <td>{{ $parent->family_dob->format('d M Y') }}</td>
                                 <td>{{ $parent->family_status }}</td>
                                 <td class="text-center">
                                     <a href="#" class="btn btn-success btn-icon-split">
@@ -67,11 +90,11 @@
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a href="#" class="btn @if( $parent->status == 'Inactive' ) btn-info @else btn-danger @endif btn-icon-split">
+                                    <a href="#" class="btn btn-danger btn-icon-split btn-delete-parent" data-id="{{ $parent->id }}">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-info"></i>
                                         </span>
-                                        <span class="text">Change status: @if( $parent->status == 'Inactive' ) Active @else Inactive @endif</span>
+                                        <span class="text">Delete</span>
                                     </a>
                                 </td>
                             </tr>        
