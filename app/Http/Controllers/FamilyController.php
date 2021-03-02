@@ -16,9 +16,38 @@ class FamilyController extends Controller
         ]);
     }
 
+    public function showPuppyFamily (Int $id)
+    {
+        // Get parent info
+        $family = Family::findOrFail($id);
+
+        // Get parent's images
+        $images = Family::find( $family->id )->familyImages;
+
+        return view( 'cms.read.parents',
+        [
+            'family' => $family,
+            'images' => $images,
+        ]);
+    }
+
     public function showPuppyFamilyCreateForm ()
     {
         return view ('cms.create.parents');
+    }
+
+    public function showPuppyFamilyUpdateForm (Int $id)
+    {
+        // Get parent info
+        $family = Family::findOrFail($id);
+        // Get parent's images
+        $images = Family::find( $family->id )->familyImages;
+
+        return view( 'cms.update.parents',
+        [
+            'family' => $family,
+            'images' => $images
+        ]);
     }
 
     public function createPuppyFamilyGallery (Int $id, String $image_name)
