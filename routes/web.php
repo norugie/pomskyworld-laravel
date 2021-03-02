@@ -77,20 +77,31 @@ Auth::routes();
 // Dashboard
 Route::get('/cms/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 
-// Parents
+/* -- Parents -- */
+// Parents - list
 Route::get('/cms/parents', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyList'])->middleware('auth');
+//Parents - fetch individual entry
+Route::get('/cms/parents/{id}', [App\Http\Controllers\FamilyController::class, 'showPuppyFamily'])->middleware('auth');
 Route::get('/cms/parents/create', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyCreateForm'])->middleware('auth');
+Route::get('/cms/parents/{id}/update', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyUpdateForm'])->middleware('auth');
+// Parents - submit data
 Route::post('/cms/parents/create', [App\Http\Controllers\FamilyController::class, 'createPuppyFamily'])->middleware('auth');
 Route::post('/cms/parents/deactivate', [App\Http\Controllers\FamilyController::class, 'deactivatePuppyFamily'])->middleware('auth');
 
-// Puppies
+/* -- Puppies -- */
+// Puppies - list
 Route::get('/cms/puppies', [App\Http\Controllers\PuppyController::class, 'showPuppyList'])->middleware('auth');
+// Puppies - fetch individual entry
 Route::get('/cms/puppies/create', [App\Http\Controllers\PuppyController::class, 'showPuppyCreateForm'])->middleware('auth');
+// Puppies - submit data
 Route::post('/cms/puppies/create', [App\Http\Controllers\PuppyController::class, 'createPuppy'])->middleware('auth');
 
-// Testimonials
+/* -- Testimonials -- */
+// Testimonials - list
 Route::get('/cms/testimonials', [App\Http\Controllers\TestimonialController::class, 'showTestimonialList'])->middleware('auth');
+// Testimonials - fetch individual entry
 Route::get('/cms/testimonials/create', [App\Http\Controllers\TestimonialController::class, 'showTestimonialCreateForm'])->middleware('auth');
+// Testimonials - submit data
 Route::post('/cms/testimonials/create', [App\Http\Controllers\TestimonialController::class, 'createTestimonial'])->middleware('auth');
 
 // Miscellaneous Routes

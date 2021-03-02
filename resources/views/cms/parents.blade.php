@@ -2,6 +2,11 @@
 
 @section('header')
     <link href="/cms/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <style>
+        .swal-footer {
+            text-align: center;
+        }
+    </style>
 @endsection
 
 @section('scripts')
@@ -70,23 +75,23 @@
                             <th>Gender</th>
                             <th>DOB</th>
                             <th>Status</th>
-                            <th>Modify</th>
+                            <th>Update</th>
                             <th>Change Status</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($parents as $parent)
                             <tr>
-                                <td>{{ $parent->family_name }}</td>
+                                <td><a href="/cms/parents/{{ $parent->id }}">{{ $parent->family_name }}</a></td>
                                 <td>{{ $parent->family_gender }}</td>
                                 <td>{{ $parent->family_dob->format('d M Y') }}</td>
                                 <td>{{ $parent->family_status }}</td>
                                 <td class="text-center">
-                                    <a href="#" class="btn btn-success btn-icon-split">
+                                    <a href="/cms/parents/{{ $parent->id }}/update" class="btn btn-success btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-edit"></i>
                                         </span>
-                                        <span class="text">Modify</span>
+                                        <span class="text">Update</span>
                                     </a>
                                 </td>
                                 <td class="text-center">

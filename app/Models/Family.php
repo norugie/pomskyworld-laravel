@@ -20,4 +20,10 @@ class Family extends Model
         'updated_at',
         'family_dob'
     ];
+
+
+    public function familyImages ()
+    {
+        return $this->hasMany( 'App\Models\FamilyImage', 'family_id' );
+    }
 }
