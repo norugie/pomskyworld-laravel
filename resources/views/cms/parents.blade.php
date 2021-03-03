@@ -87,20 +87,35 @@
                                 <td>{{ $parent->family_dob->format('d M Y') }}</td>
                                 <td>{{ $parent->family_status }}</td>
                                 <td class="text-center">
-                                    <a href="/cms/parents/{{ $parent->id }}/update" class="btn btn-success btn-icon-split">
+                                    {{-- <a href="/cms/parents/{{ $parent->id }}/update" class="btn btn-success btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-edit"></i>
                                         </span>
                                         <span class="text">Update</span>
-                                    </a>
+                                    </a> --}}
+                                    <div class="dropdown mb-4">
+                                        <button class="btn btn-success dropdown-toggle" type="button"
+                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-edit"></i>
+                                            </span>
+                                            <span class="text">Update</span>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right animated--fade-in"
+                                            aria-labelledby="dropdownUpdateButton">
+                                            <a class="dropdown-item" href="/cms/parents/{{ $parent->id }}/update/info">Update parent info</a>
+                                            <a class="dropdown-item" href="/cms/parents/{{ $parent->id }}/update/gallery">Update parent gallery</a>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td class="text-center">
-                                    <a href="#" class="btn btn-danger btn-icon-split btn-delete-parent" data-id="{{ $parent->id }}">
+                                    <button class="btn btn-danger btn-delete-parent" data-id="{{ $parent->id }}" type="button">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-info"></i>
                                         </span>
                                         <span class="text">Delete</span>
-                                    </a>
+                                    </button>
                                 </td>
                             </tr>        
                         @endforeach

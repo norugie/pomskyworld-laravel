@@ -83,9 +83,10 @@ Route::get('/cms/parents', [App\Http\Controllers\FamilyController::class, 'showP
 //Parents - fetch individual entry
 Route::get('/cms/parents/{id}', [App\Http\Controllers\FamilyController::class, 'showPuppyFamily'])->middleware('auth');
 Route::get('/cms/parents/create', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyCreateForm'])->middleware('auth');
-Route::get('/cms/parents/{id}/update', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyUpdateForm'])->middleware('auth');
+Route::get('/cms/parents/{id}/update/{type}', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyUpdateForm'])->middleware('auth');
 // Parents - submit data
 Route::post('/cms/parents/create', [App\Http\Controllers\FamilyController::class, 'createPuppyFamily'])->middleware('auth');
+Route::post('/cms/parents/{id}/update/{type}', [App\Http\Controllers\FamilyController::class, 'updatePuppyFamily'])->middleware('auth');
 Route::post('/cms/parents/deactivate', [App\Http\Controllers\FamilyController::class, 'deactivatePuppyFamily'])->middleware('auth');
 
 /* -- Puppies -- */
