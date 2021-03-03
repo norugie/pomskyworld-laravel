@@ -19,14 +19,14 @@ class FamilyController extends Controller
     public function showPuppyFamily (Int $id)
     {
         // Get parent info
-        $family = Family::findOrFail($id);
+        $family = Family::find($id);
 
         // Get parent's images
         $images = Family::find( $family->id )->familyImages;
 
         return view( 'cms.read.parents',
         [
-            'family' => $family,
+            'parent' => $family,
             'images' => $images,
         ]);
     }
@@ -36,18 +36,25 @@ class FamilyController extends Controller
         return view ('cms.create.parents');
     }
 
-    public function showPuppyFamilyUpdateForm (Int $id)
+    public function showPuppyFamilyUpdateForm (Int $id, String $type)
     {
         // Get parent info
         $family = Family::findOrFail($id);
-        // Get parent's images
-        $images = Family::find( $family->id )->familyImages;
 
-        return view( 'cms.update.parents',
-        [
-            'family' => $family,
-            'images' => $images
-        ]);
+        if($type === 'gallery') {
+            $images = Family::find( $family->id )->familyImages;
+
+            return view( 'cms.update.images.parents',
+            [
+                'parent' => $family,
+                'images' => $images
+            ]);
+        } else {
+            return view( 'cms.update.parents',
+            [
+                'parent' => $family
+            ]);
+        }
     }
 
     public function createPuppyFamilyGallery (Int $id, String $image_name)
@@ -96,6 +103,39 @@ class FamilyController extends Controller
             'crud' => 'create',
             'status' => 'success',
             'message' => 'A family entry has been created successfully.'
+        ]);
+
+        return redirect('/cms/parents');
+    }
+
+    public function updatePuppyFamily (Request $request, Int $id, String $type)
+    {
+        // Get parent info
+        $family = Family::find($id);
+
+        if($type === 'form') {
+            $request->validate( 
+            [
+                'parent_name' => 'required',
+                'parent_info' => 'required'
+            ],
+            [
+                'parent_name.required' => 'You cannot leave this section empty.',
+                'parent_info.required' => 'You cannot leave this section empty.'
+            ]);
+    
+            $family->family_name = $request->parent_name;
+            $family->family_gender = $request->gender_select;
+            $family->family_dob = $request->parent_dob;
+            $family->family_desc = $request->parent_info;
+
+            $family->save();
+        }
+
+        session([ 
+            'crud' => 'update',
+            'status' => 'success',
+            'message' => 'A family entry has been updated successfully.'
         ]);
 
         return redirect('/cms/parents');
