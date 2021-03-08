@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-lg-9 col-sm-12"><h4 class="m-0 font-weight-bold text-primary">Puppy Parents - New Parent</h4></div>
                 <div class="col-lg-3 col-sm-12">
-                    <a href="/cms/parents" class="btn btn-primary btn-icon-split">
+                    <a href="/cms/parents" class="btn btn-primary">
                         <span class="icon text-white-50">
                             <i class="fas fa-list"></i>
                         </span>
@@ -68,7 +68,7 @@
                                     <i class="fas fa-calendar"></i>
                                 </span>
                             </div>
-                            <input type="date" value="{{ date('Y-m-d') }}" max="{{ date('Y-m-d') }}" id="parent_dob" name="parent_dob" class="form-control clear-border @error('parent_dob') is-invalid @enderror" value="{{ old('parent_dob') }}" required>
+                            <input type="date" value="{{ date('Y-m-d') }}" max="{{ date('Y-m-d') }}" id="parent_dob" name="parent_dob" class="form-control clear-border @error('parent_dob') is-invalid @enderror" required>
                             <div class="invalid-feedback">@error('parent_dob'){{ $message }}@else You cannot leave this section empty. @enderror</div>
                         </div>
                         <p class="font-12 small mb-0"><b>Note:</b> Leaving this empty will automatically set the date of birth to the current date.</p>

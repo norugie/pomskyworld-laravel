@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col-lg-9 col-sm-12"><h4 class="m-0 font-weight-bold text-primary">Puppy Parents - List</h4></div>
                 <div class="col-lg-3 col-sm-12">
-                    <a href="/cms/parents/create" class="btn btn-primary btn-icon-split">
+                    <a href="/cms/parents/create" class="btn btn-primary">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
@@ -87,13 +87,7 @@
                                 <td>{{ $parent->family_dob->format('d M Y') }}</td>
                                 <td>{{ $parent->family_status }}</td>
                                 <td class="text-center">
-                                    {{-- <a href="/cms/parents/{{ $parent->id }}/update" class="btn btn-success btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-edit"></i>
-                                        </span>
-                                        <span class="text">Update</span>
-                                    </a> --}}
-                                    <div class="dropdown mb-4">
+                                    <div class="dropdown no-arrow mb-4">
                                         <button class="btn btn-success dropdown-toggle" type="button"
                                             id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">
@@ -104,15 +98,21 @@
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-right animated--fade-in"
                                             aria-labelledby="dropdownUpdateButton">
-                                            <a class="dropdown-item" href="/cms/parents/{{ $parent->id }}/update/info">Update parent info</a>
-                                            <a class="dropdown-item" href="/cms/parents/{{ $parent->id }}/update/gallery">Update parent gallery</a>
+                                            <a class="dropdown-item" href="/cms/parents/{{ $parent->id }}/update/info">
+                                                <i class="fas fa-edit fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Update parent info
+                                            </a>
+                                            <a class="dropdown-item" href="/cms/parents/{{ $parent->id }}/update/gallery">
+                                                <i class="fas fa-image fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Update parent gallery
+                                            </a>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="text-center">
                                     <button class="btn btn-danger btn-delete-parent" data-id="{{ $parent->id }}" type="button">
                                         <span class="icon text-white-50">
-                                            <i class="fas fa-info"></i>
+                                            <i class="fas fa-trash"></i>
                                         </span>
                                         <span class="text">Delete</span>
                                     </button>
