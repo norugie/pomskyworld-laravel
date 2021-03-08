@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-lg-9 col-sm-12"><h4 class="m-0 font-weight-bold text-primary">Puppy Parents - Update Parent</h4></div>
                 <div class="col-lg-3 col-sm-12">
-                    <a href="/cms/parents" class="btn btn-primary btn-icon-split">
+                    <a href="/cms/parents" class="btn btn-primary">
                         <span class="icon text-white-50">
                             <i class="fas fa-list"></i>
                         </span>
