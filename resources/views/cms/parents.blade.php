@@ -74,7 +74,7 @@
                             <th>Name</th>
                             <th>Gender</th>
                             <th>DOB</th>
-                            <th>Status</th>
+                            <th>Breed</th>
                             <th>Update</th>
                             <th>Change Status</th>
                         </tr>
@@ -85,7 +85,7 @@
                                 <td><a href="/cms/parents/{{ $parent->id }}">{{ $parent->family_name }}</a></td>
                                 <td>{{ $parent->family_gender }}</td>
                                 <td>{{ $parent->family_dob->format('d M Y') }}</td>
-                                <td>{{ $parent->family_status }}</td>
+                                <td>{{ $parent->family_breed }}</td>
                                 <td class="text-center">
                                     <div class="dropdown no-arrow mb-4">
                                         <button class="btn btn-success dropdown-toggle" type="button"
