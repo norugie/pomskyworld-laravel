@@ -99,11 +99,11 @@
                                         <div class="dropdown-menu dropdown-menu-right animated--fade-in"
                                             aria-labelledby="dropdownUpdateButton">
                                             <a class="dropdown-item" href="/cms/parents/{{ $parent->id }}/update/info">
-                                                <i class="fas fa-edit fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                <i class="fas fa-edit fa-sm fa-fw mr-2 text-gray-600"></i>
                                                 Update parent info
                                             </a>
                                             <a class="dropdown-item" href="/cms/parents/{{ $parent->id }}/update/gallery">
-                                                <i class="fas fa-image fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                <i class="fas fa-image fa-sm fa-fw mr-2 text-gray-600"></i>
                                                 Update parent gallery
                                             </a>
                                         </div>
