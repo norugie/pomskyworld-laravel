@@ -16,6 +16,7 @@ class CreateFamiliesTable extends Migration
         Schema::create('families', function (Blueprint $table) {
             $table->id();
             $table->string('family_name');
+            $table->string('family_breed');
             $table->timestamp('family_dob');
             $table->enum('family_gender', ['Male', 'Female']);
             $table->text('family_desc');

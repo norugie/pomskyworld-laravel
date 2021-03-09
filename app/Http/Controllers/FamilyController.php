@@ -74,15 +74,18 @@ class FamilyController extends Controller
         $request->validate( 
         [
             'parent_name' => 'required',
-            'parent_info' => 'required'
+            'parent_info' => 'required',
+            'parent_breed' => 'required'
         ],
         [
             'parent_name.required' => 'You cannot leave this section empty.',
-            'parent_info.required' => 'You cannot leave this section empty.'
+            'parent_info.required' => 'You cannot leave this section empty.',
+            'parent_breed.required' => 'You cannot leave this section empty.'
         ]);
 
         $family->family_name = $request->parent_name;
         $family->family_gender = $request->gender_select;
+        $family->family_breed = $request->parent_breed;
         $family->family_dob = $request->parent_dob;
         $family->family_desc = $request->parent_info;
 
@@ -117,15 +120,18 @@ class FamilyController extends Controller
             $request->validate( 
             [
                 'parent_name' => 'required',
-                'parent_info' => 'required'
+                'parent_info' => 'required',
+                'parent_breed' => 'required'
             ],
             [
                 'parent_name.required' => 'You cannot leave this section empty.',
-                'parent_info.required' => 'You cannot leave this section empty.'
+                'parent_info.required' => 'You cannot leave this section empty.',
+                'parent_breed.required' => 'You cannot leave this section empty.'
             ]);
     
             $family->family_name = $request->parent_name;
             $family->family_gender = $request->gender_select;
+            $family->family_breed = $request->parent_breed;
             $family->family_dob = $request->parent_dob;
             $family->family_desc = $request->parent_info;
 

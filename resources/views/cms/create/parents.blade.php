@@ -32,19 +32,31 @@
             <form class="needs-validation" action="/cms/parents/create" method="POST" novalidate>
                 @csrf
                 <div class="row mb-1">
-                    <div class="col-lg-4 col-sm-12">
+                    <div class="col-lg-3 col-sm-12">
                         <label class="label-emphasis" for="parent_name">Parent Name *</label>
                         <div class="input-group mb-1">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
-                                    <i class="fas fa-dog"></i>
+                                    <i class="fas fa-tag"></i>
                                 </span>
                             </div>
                             <input type="text" id="parent_name" name="parent_name" class="form-control clear-border @error('parent_name') is-invalid @enderror" value="{{ old('parent_name') }}" required>
                             <div class="invalid-feedback">@error('parent_name'){{ $message }}@else You cannot leave this section empty. @enderror</div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-12">
+                    <div class="col-lg-3 col-sm-12">
+                        <label class="label-emphasis" for="parent_breed">Parent Breed *</label>
+                        <div class="input-group mb-1">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-dog"></i>
+                                </span>
+                            </div>
+                            <input type="text" id="parent_breed" name="parent_breed" class="form-control clear-border @error('parent_breed') is-invalid @enderror" value="{{ old('parent_breed') }}" required>
+                            <div class="invalid-feedback">@error('parent_breed'){{ $message }}@else You cannot leave this section empty. @enderror</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
                         <label class="label-emphasis" for="gender_select">Parent Gender</label>
                         <div class="input-group mb-1">
                             <div class="input-group-prepend">
@@ -60,7 +72,7 @@
                         </div>
                         <p class="font-12 small mb-0"><b>Note:</b> Leaving this empty will automatically set the gender to "Male".</p>
                     </div>
-                    <div class="col-lg-4 col-sm-12">
+                    <div class="col-lg-3 col-sm-12">
                         <label class="label-emphasis" for="parent_dob">Parent DOB</label>
                         <div class="input-group mb-1">
                             <div class="input-group-prepend">
