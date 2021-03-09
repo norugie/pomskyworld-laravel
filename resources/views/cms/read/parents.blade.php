@@ -71,16 +71,16 @@
                         <div class="dropdown-menu dropdown-menu-right animated--fade-in"
                             aria-labelledby="dropdownUpdateButton">
                             <a class="dropdown-item" href="/cms/parents/{{ $parent->id }}/update/info">
-                                <i class="fas fa-edit fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <i class="fas fa-edit fa-sm fa-fw mr-2 text-gray-600"></i>
                                 Update parent info
                             </a>
                             <a class="dropdown-item" href="/cms/parents/{{ $parent->id }}/update/gallery">
-                                <i class="fas fa-image fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <i class="fas fa-image fa-sm fa-fw mr-2 text-gray-600"></i>
                                 Update parent gallery
                             </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item btn-delete-parent" href="#" data-id="{{ $parent->id }}">
-                                <i class="fas fa-trash fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <i class="fas fa-trash fa-sm fa-fw mr-2 text-gray-600"></i>
                                 Delete parent
                             </a>
                         </div>
@@ -90,13 +90,16 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-lg-4 col-sm-12">
+                <div class="col-lg-3 col-sm-12">
                     <b>Parent Name:</b> {{ $parent->family_name }}
                 </div>
-                <div class="col-lg-4 col-sm-12">
+                <div class="col-lg-3 col-sm-12">
+                    <b>Parent Breed:</b> {{ $parent->family_breed }}
+                </div>
+                <div class="col-lg-3 col-sm-12">
                     <b>Parent Gender:</b> {{ $parent->family_gender }}
                 </div>
-                <div class="col-lg-4 col-sm-12">
+                <div class="col-lg-3 col-sm-12">
                     <b>Parent Date of Birth:</b> {{ $parent->family_dob->format('d M Y') }}
                 </div>
             </div>
@@ -113,7 +116,12 @@
             <div class="row">
                 @if(count($images) == 0) <div class="col-12">There are no images set for this entry.</div>@endif
                 @foreach ($images as $image)
-                    <div class="col-lg-3 col-sm-12">image</div>
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="text-center">
+                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                src="/images/parents/{{ $image->family_image_name }}" alt="">
+                        </div>
+                    </div>
                 @endforeach
             </div>
         </div>

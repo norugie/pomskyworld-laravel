@@ -20,7 +20,7 @@
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                 aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
-                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-600"></i>
                     Account Settings
                 </a>
                 <div class="dropdown-divider"></div>
@@ -28,7 +28,7 @@
                     href="/logout"
                     onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
-                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>
                     Logout
                 </a>
 
