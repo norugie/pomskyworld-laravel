@@ -1,86 +1,16 @@
 @extends('layouts.app')
 
 @section('header')
-    <style>
-        ul {
-            list-style-type: none;
-        }
-
-        li {
-            display: inline-block;
-        }
-
-        input[type="checkbox"][id^="cb"] {
-            display: none;
-        }
-
-        label {
-            border: 1px solid #fff;
-            padding: 10px;
-            display: block;
-            position: relative;
-            margin: 10px;
-            cursor: pointer;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        label::before {
-            background-color: white;
-            color: white;
-            content: " ";
-            display: block;
-            border-radius: 50%;
-            border: 1px solid #4e73df;
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            width: 25px;
-            height: 25px;
-            text-align: center;
-            line-height: 28px;
-            transition-duration: 0.4s;
-            transform: scale(0);
-        }
-
-        label img {
-            height: 100px;
-            width: 100px;
-            transition-duration: 0.2s;
-            transform-origin: 50% 50%;
-        }
-
-        :checked+label {
-            border-color: #ddd;
-        }
-
-        :checked+label::before {
-            content: "✓";
-            background-color: #4e73df;
-            transform: scale(1);
-        }
-
-        :checked+label img {
-            transform: scale(0.95);
-            z-index: -1;
-        }
-    </style>
+    {{-- Additional stylesheets for page: /update/gallery --}}
+    <link rel="stylesheet" href="/cms/vendor/dropzone/dist/min/dropzone.min.css">
+    <link href="/cms/css/img-checkbox.css" rel="stylesheet">
 @endsection
 
 @section('scripts')
-    <script>
-        $(document).on('click', '.img-checkbox-data', function (e) {
-            var id = $(this).data('ext-id');
-            var existingImageNameList = $('#ext_image_list').val();
-            if(existingImageNameList.includes(id + ",") ? existingImageNameList = existingImageNameList.replace(id + ',', '') : existingImageNameList = existingImageNameList + id + ",");
-            
-            $('#ext_image_list').attr('value', existingImageNameList);
-        });
-    </script>
+    {{-- Additional scripts for page: /create --}}
+    <script src="/cms/vendor/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="/cms/js/plugin-config/dropzone-family.js"></script>
+    <script src="/cms/js/img-add-remove-checkbox.js"></script>
 @endsection
 
 @section('content')
@@ -103,6 +33,7 @@
             <div class="row">
                 <div class="col-12"><b>Select the images you want to delete</b></div>
             </div>
+            <br>
             <div class="row">
                 @if(count($images) == 0) <div class="col-12">There are no images set for this entry.</div>@endif
                 @php
@@ -117,14 +48,35 @@
                                     src="/images/parents/{{ $image->family_image_name }}" alt=""></label>
                                 </li>
                             </ul>
-                            <p>{{ $image->id }}</p>
                         </div>
                     </div>
                     @php
                         $cbCtr++;
                     @endphp
                 @endforeach
-                <input type="text" id="ext_image_list" value="">
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <form action="/cms/parents/{{ $parent->id }}/update/gallery" method="POST">
+                        @csrf
+                        <input type="text" id="ext_image_name" name="ext_image_name" value="" hidden>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label class="label-emphasis" for="dropzone-gallery"><b>Upload new images to parent gallery</b></label>
+                                <div id="dropzone-gallery" class="dropzone">
+                                    <div class="dz-default dz-message"><h3>Drop images here or click to upload</h3></div>
+                                </div>
+                                <input type="text" id="image_name" name="image_name" value="" hidden>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button class="btn btn-primary btn-lg btn-block" value="submit">SUBMIT PARENT GALLERY UPDATE</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
