@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File; 
 use App\Models\Family;
 use App\Models\FamilyImage;
 
@@ -65,6 +66,16 @@ class FamilyController extends Controller
 
         // Save current image object
         $image->save();
+    }
+
+    public function deletePuppyFamilyGallery (String $image_id)
+    {
+        $id = intval($image_id);
+        $image = FamilyImage::findOrFail($id);
+
+        $path = public_path() . '/images/parents/' . $image->family_image_name;
+        if( File::exists( $path ) ) File::delete( $path );
+        $image->delete();
     }
 
     public function createPuppyFamily (Request $request)
@@ -136,6 +147,27 @@ class FamilyController extends Controller
             $family->family_desc = $request->parent_info;
 
             $family->save();
+        } else {
+            $images = $request->image_name;
+            $ext_images = $request->ext_image_name;
+
+            if ($images) {
+                $image_array = explode(',', rtrim($images, ','));
+
+                // Save new family gallery
+                foreach($image_array as $image_name):
+                    $this->createPuppyFamilyGallery($id, $image_name);
+                endforeach;
+            }
+
+            if ($ext_images) {
+                $ext_image_array = explode(',', rtrim($ext_images, ','));
+
+                // Delete selected images
+                foreach($ext_image_array as $image_id):
+                    $this->deletePuppyFamilyGallery($image_id);
+                endforeach;
+            }
         }
 
         session([ 
