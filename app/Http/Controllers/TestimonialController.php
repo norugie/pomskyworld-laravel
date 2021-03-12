@@ -11,7 +11,7 @@ class TestimonialController extends Controller
     {
         return view ( 'cms.testimonials',
         [
-            'testimonials' => Testimonial::all()
+            'testimonials' => Testimonial::where('testimonial_status', 'Active')->orderBy('id', 'DESC')->get()
         ]);
     }
 
@@ -47,5 +47,18 @@ class TestimonialController extends Controller
         ]);
 
         return redirect('/cms/testimonials');
+    }
+
+    public function deactivateTestimonial (Request $request)
+    {
+        $testimonial = Testimonial::find($request->id);
+        $testimonial->testimonial_status = 'Inactive';
+        $testimonial->save();
+
+        session([ 
+            'crud' => 'deactivate',
+            'status' => 'success',
+            'message' => 'A testimonial entry has been deleted successfully.'
+        ]);
     }
 }
