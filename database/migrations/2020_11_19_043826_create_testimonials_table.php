@@ -16,10 +16,9 @@ class CreateTestimonialsTable extends Migration
         Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
             $table->string('testimonial_name');
-            $table->string('testimonial_city');
-            $table->string('testimonial_province');
             $table->text('testimonial_desc');
             $table->enum('testimonial_status', ['Active', 'Inactive']);
+            $table->timestamp('testimonial_date');
             $table->timestamps();
         });
     }
