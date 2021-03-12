@@ -23,7 +23,7 @@ class FamilyController extends Controller
         $family = Family::find($id);
 
         // Get parent's images
-        $images = Family::find( $family->id )->familyImages;
+        $images = Family::find($family->id)->familyImages;
 
         return view( 'cms.read.parents',
         [
@@ -42,16 +42,16 @@ class FamilyController extends Controller
         // Get parent info
         $family = Family::findOrFail($id);
 
-        if($type === 'gallery') {
-            $images = Family::find( $family->id )->familyImages;
+        if ($type === 'gallery') {
+            $images = Family::find($family->id)->familyImages;
 
-            return view( 'cms.update.images.parents',
+            return view('cms.update.images.parents',
             [
                 'parent' => $family,
                 'images' => $images
             ]);
         } else {
-            return view( 'cms.update.parents',
+            return view('cms.update.parents',
             [
                 'parent' => $family
             ]);
@@ -74,7 +74,7 @@ class FamilyController extends Controller
         $image = FamilyImage::findOrFail($id);
 
         $path = public_path() . '/images/parents/' . $image->family_image_name;
-        if( File::exists( $path ) ) File::delete( $path );
+        if (File::exists( $path )) File::delete($path);
         $image->delete();
     }
 
@@ -127,7 +127,7 @@ class FamilyController extends Controller
         // Get parent info
         $family = Family::find($id);
 
-        if($type === 'form') {
+        if ($type === 'form') {
             $request->validate( 
             [
                 'parent_name' => 'required',
