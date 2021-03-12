@@ -106,6 +106,7 @@ Route::middleware(['auth'])->group(function() {
         Route::get('/create', [App\Http\Controllers\TestimonialController::class, 'showTestimonialCreateForm']);
         // Testimonials - submit data
         Route::post('/create', [App\Http\Controllers\TestimonialController::class, 'createTestimonial']);
+        Route::post('/deactivate', [App\Http\Controllers\TestimonialController::class, 'deactivateTestimonial']);
     });
 
     // Miscellaneous Routes
