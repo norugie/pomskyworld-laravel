@@ -140,16 +140,16 @@
                                 </nav>
                                 <nav class="navigation nav-block primary-navigation nav-right">
                                     <ul>
-                                        <li class="{{ Request::is( '/' ) ? 'current' : '' }}">
+                                        <li class="{{ Request::is('/') ? 'current' : '' }}">
                                             <a href="/">Home</a>
                                         </li>
-                                        <li class="{{ Request::is( 'pomsky' ) ? 'current' : '' }}">
+                                        <li class="{{ Request::is('pomsky') ? 'current' : '' }}">
                                             <a href="/pomsky">What is a Pomsky?</a>
                                         </li>
-                                        <li class="{{ Request::is( 'photos' ) ? 'current' : '' }}">
+                                        <li class="{{ Request::is('photos') ? 'current' : '' }}">
                                             <a href="/photos">Photos</a>
                                         </li>
-                                        <li class="contains-sub-menu {{ Request::is( 'available-puppies' ) || Request::is( 'previous-puppies' ) || Request::is( 'testimonials' ) ? 'current' : '' }}">
+                                        <li class="contains-sub-menu {{ Request::is('available-puppies') || Request::is('previous-puppies') || Request::is('testimonials') ? 'current' : '' }}">
                                             <a href="/available-puppies">Puppies</a>
                                             <ul class="sub-menu">
                                                 <li>
@@ -163,10 +163,10 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="{{ Request::is( 'parents' ) ? 'current' : '' }}">
+                                        <li class="{{ Request::is('parents') ? 'current' : '' }}">
                                             <a href="/parents">Parents</a>
                                         </li>
-                                        <li class="contains-sub-menu {{ Request::is( 'guarantee' ) || Request::is( 'prices' ) || Request::is( 'qualifications' ) ? 'current' : '' }}">
+                                        <li class="contains-sub-menu {{ Request::is('guarantee') || Request::is('prices') || Request::is('qualifications') ? 'current' : '' }}">
                                             <a href="/guarantee">Adoptions</a>
                                             <ul class="sub-menu">
                                                 <li>
@@ -180,7 +180,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="contains-sub-menu {{ Request::is( 'about' ) || Request::is( 'faq' ) ? 'current' : '' }}">
+                                        <li class="contains-sub-menu {{ Request::is('about') || Request::is('faq') ? 'current' : '' }}">
                                             <a href="/about">Info</a>
                                             <ul class="sub-menu">
                                                 <li>
@@ -191,7 +191,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="{{ Request::is( 'contact' ) ? 'current' : '' }}">
+                                        <li class="{{ Request::is('contact') ? 'current' : '' }}">
                                             <a href="/contact">Contact Us</a>
                                         </li>
                                     </ul>

@@ -12,22 +12,22 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item {{ Request::is( 'cms/dashboard' ) ? 'active' : '' }}">
+    <li class="nav-item {{ Request::is('cms/dashboard') ? 'active' : '' }}">
         <a class="nav-link" href="/cms/dashboard">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
-    <li class="nav-item {{ Request::is( 'cms/puppies' ) || Request::is( 'cms/puppies/*' ) ? 'active' : '' }}">
+    <li class="nav-item {{ Request::is('cms/puppies') || Request::is('cms/puppies/*') ? 'active' : '' }}">
         <a class="nav-link" href="/cms/puppies">
             <i class="fas fa-fw fa-paw"></i>
             <span>Puppies</span></a>
     </li>
-    <li class="nav-item {{ Request::is( 'cms/parents' ) || Request::is( 'cms/parents/*' ) ? 'active' : '' }}">
+    <li class="nav-item {{ Request::is('cms/parents') || Request::is('cms/parents/*') ? 'active' : '' }}">
         <a class="nav-link" href="/cms/parents">
             <i class="fas fa-fw fa-dog"></i>
             <span>Parents</span></a>
     </li>
-    <li class="nav-item {{ Request::is( 'cms/testimonials' ) || Request::is( 'cms/testimonials/*' ) ? 'active' : '' }}">
+    <li class="nav-item {{ Request::is('cms/testimonials') || Request::is('cms/testimonials/*') ? 'active' : '' }}">
         <a class="nav-link" href="/cms/testimonials">
             <i class="fas fa-fw fa-comments"></i>
             <span>Testimonials</span></a>

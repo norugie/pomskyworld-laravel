@@ -13,11 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Testing
-Route::get('/test', function(){
-    return view('test');
-});
-
 // Site content here
 Route::get( '/', function () {
     return view( 'index' );
@@ -74,37 +69,47 @@ Route::get( '/contact', function () {
 // CMS content here
 Auth::routes();
 
-// Dashboard
-Route::get('/cms/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 
-/* -- Parents -- */
-// Parents - list
-Route::get('/cms/parents', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyList'])->middleware('auth');
-//Parents - fetch individual entry
-Route::get('/cms/parents/create', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyCreateForm'])->middleware('auth');
-Route::get('/cms/parents/{id}', [App\Http\Controllers\FamilyController::class, 'showPuppyFamily'])->middleware('auth');
-Route::get('/cms/parents/{id}/update/{type}', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyUpdateForm'])->middleware('auth');
-// Parents - submit data
-Route::post('/cms/parents/create', [App\Http\Controllers\FamilyController::class, 'createPuppyFamily'])->middleware('auth');
-Route::post('/cms/parents/{id}/update/{type}', [App\Http\Controllers\FamilyController::class, 'updatePuppyFamily'])->middleware('auth');
-Route::post('/cms/parents/deactivate', [App\Http\Controllers\FamilyController::class, 'deactivatePuppyFamily'])->middleware('auth');
+Route::middleware(['auth'])->group(function() {
+    // Dashboard
+    Route::get('/cms/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth');
 
-/* -- Puppies -- */
-// Puppies - list
-Route::get('/cms/puppies', [App\Http\Controllers\PuppyController::class, 'showPuppyList'])->middleware('auth');
-// Puppies - fetch individual entry
-Route::get('/cms/puppies/create', [App\Http\Controllers\PuppyController::class, 'showPuppyCreateForm'])->middleware('auth');
-// Puppies - submit data
-Route::post('/cms/puppies/create', [App\Http\Controllers\PuppyController::class, 'createPuppy'])->middleware('auth');
+    /* -- Parents -- */
+    Route::prefix('cms/parents')->group(function () {
+        // Parents - list
+        Route::get('/', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyList']);
+        //Parents - fetch individual entry
+        Route::get('/create', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyCreateForm']);
+        Route::get('/{id}', [App\Http\Controllers\FamilyController::class, 'showPuppyFamily']);
+        Route::get('/{id}/update/{type}', [App\Http\Controllers\FamilyController::class, 'showPuppyFamilyUpdateForm']);
+        // Parents - submit data
+        Route::post('/create', [App\Http\Controllers\FamilyController::class, 'createPuppyFamily']);
+        Route::post('/{id}/update/{type}', [App\Http\Controllers\FamilyController::class, 'updatePuppyFamily']);
+        Route::post('/deactivate', [App\Http\Controllers\FamilyController::class, 'deactivatePuppyFamily']);
+    });
 
-/* -- Testimonials -- */
-// Testimonials - list
-Route::get('/cms/testimonials', [App\Http\Controllers\TestimonialController::class, 'showTestimonialList'])->middleware('auth');
-// Testimonials - fetch individual entry
-Route::get('/cms/testimonials/create', [App\Http\Controllers\TestimonialController::class, 'showTestimonialCreateForm'])->middleware('auth');
-// Testimonials - submit data
-Route::post('/cms/testimonials/create', [App\Http\Controllers\TestimonialController::class, 'createTestimonial'])->middleware('auth');
+    /* -- Puppies -- */
+    Route::prefix('cms/puppies')->group(function () {
+        // Puppies - list
+        Route::get('/', [App\Http\Controllers\PuppyController::class, 'showPuppyList']);
+        // Puppies - fetch individual entry
+        Route::get('/create', [App\Http\Controllers\PuppyController::class, 'showPuppyCreateForm']);
+        // Puppies - submit data
+        Route::post('/create', [App\Http\Controllers\PuppyController::class, 'createPuppy']);
+    });
 
-// Miscellaneous Routes
-Route::post( '/cms/upload/{type}', [App\Http\Controllers\HomeController::class, 'uploadImage'] )->name('home');
-Route::post( '/cms/delete/{type}', [App\Http\Controllers\HomeController::class, 'deleteImage'] )->name('home');
+    /* -- Testimonials -- */
+    Route::prefix('cms/testimonials')->group(function () {
+        // Testimonials - list
+        Route::get('/', [App\Http\Controllers\TestimonialController::class, 'showTestimonialList']);
+        // Testimonials - fetch individual entry
+        Route::get('/create', [App\Http\Controllers\TestimonialController::class, 'showTestimonialCreateForm']);
+        // Testimonials - submit data
+        Route::post('/create', [App\Http\Controllers\TestimonialController::class, 'createTestimonial']);
+    });
+
+    // Miscellaneous Routes
+    Route::post('/cms/upload/{type}', [App\Http\Controllers\HomeController::class, 'uploadImage']);
+    Route::post('/cms/delete/{type}', [App\Http\Controllers\HomeController::class, 'deleteImage']);
+});
+
