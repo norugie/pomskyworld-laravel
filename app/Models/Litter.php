@@ -19,4 +19,9 @@ class Litter extends Model
         'updated_at',
         'litter_dob'
     ];
+
+    public function litterPuppies ()
+    {
+        return $this->hasMany( 'App\Models\Puppy', 'litter_id' );
+    }
 }

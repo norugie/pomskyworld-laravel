@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Puppy extends Model
 {
     use HasFactory;
+
+    public function puppyImages ()
+    {
+        return $this->hasMany( 'App\Models\PuppyImage', 'puppy_id' );
+    }
 }

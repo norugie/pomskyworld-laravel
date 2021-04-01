@@ -17,10 +17,10 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
-    <li class="nav-item {{ Request::is('cms/puppies') || Request::is('cms/puppies/*') ? 'active' : '' }}">
-        <a class="nav-link" href="/cms/puppies">
+    <li class="nav-item {{ Request::is('cms/litters') || Request::is('cms/litters/*') ? 'active' : '' }}">
+        <a class="nav-link" href="/cms/litters">
             <i class="fas fa-fw fa-paw"></i>
-            <span>Puppies</span></a>
+            <span>Puppy Litters</span></a>
     </li>
     <li class="nav-item {{ Request::is('cms/parents') || Request::is('cms/parents/*') ? 'active' : '' }}">
         <a class="nav-link" href="/cms/parents">
