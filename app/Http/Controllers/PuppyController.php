@@ -17,6 +17,11 @@ class PuppyController extends Controller
         ]);
     }
 
+    public function showPuppyList ()
+    {
+        //
+    }
+
     public function showLitterCreateForm ()
     {
         return view ( 'cms.create.litters',
@@ -26,8 +31,40 @@ class PuppyController extends Controller
         ]);
     }
 
-    public function createLitter ()
+    public function showPuppyCreateForm (Int $id)
     {
-        //
+        return view( 'cms.create.puppies' );
+    }
+
+    public function createLitter (Request $request)
+    {
+        $litter = new Litter();
+        
+        $request->validate( 
+        [
+            'litter_name' => 'required',
+            'litter_info' => 'required',
+            'litter_number' => 'required|integer|min:1'
+        ],
+        [
+            'litter_name.required' => 'You cannot leave this section empty.',
+            'litter_info.required' => 'You cannot leave this section empty.',
+            'litter_number.required' => 'You cannot leave this section empty.',
+            'litter_number.integer' => 'The entered value must be a number.',
+            'litter_number.min' => 'The minimum valid value is 1.'
+        ]);
+
+        $litter->litter_name = $request->litter_name;
+        $litter->litter_dob = $request->litter_dob;
+        $litter->litter_desc = $request->litter_info;
+
+        $litter->save();
+
+
+        session([ 
+            'ctr' => $request->litter_number
+        ]);
+
+        return redirect('cms/litters/'. $litter->id .'/puppies/create');
     }
 }

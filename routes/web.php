@@ -94,6 +94,7 @@ Route::middleware(['auth'])->group(function() {
         Route::get('/', [App\Http\Controllers\PuppyController::class, 'showLitterList']);
         // Litters - fetch individual entry
         Route::get('/create', [App\Http\Controllers\PuppyController::class, 'showLitterCreateForm']);
+        Route::get('/{id}/puppies/create', [App\Http\Controllers\PuppyController::class, 'showPuppyCreateForm']);
         // Litters - submit data
         Route::post('/create', [App\Http\Controllers\PuppyController::class, 'createLitter']);
     });
@@ -112,5 +113,6 @@ Route::middleware(['auth'])->group(function() {
     // Miscellaneous Routes
     Route::post('/cms/upload/{type}', [App\Http\Controllers\HomeController::class, 'uploadImage']);
     Route::post('/cms/delete/{type}', [App\Http\Controllers\HomeController::class, 'deleteImage']);
+    Route::post('/cms/ctradd', [App\Http\Controllers\HomeController::class, 'ctrAddValue']);
 });
 
