@@ -88,14 +88,14 @@ Route::middleware(['auth'])->group(function() {
         Route::post('/deactivate', [App\Http\Controllers\FamilyController::class, 'deactivatePuppyFamily']);
     });
 
-    /* -- Puppies -- */
-    Route::prefix('cms/puppies')->group(function () {
-        // Puppies - list
-        Route::get('/', [App\Http\Controllers\PuppyController::class, 'showPuppyList']);
-        // Puppies - fetch individual entry
-        Route::get('/create', [App\Http\Controllers\PuppyController::class, 'showPuppyCreateForm']);
-        // Puppies - submit data
-        Route::post('/create', [App\Http\Controllers\PuppyController::class, 'createPuppy']);
+    /* -- Litters & Puppies-- */
+    Route::prefix('cms/litters')->group(function () {
+        // Litters - list
+        Route::get('/', [App\Http\Controllers\PuppyController::class, 'showLitterList']);
+        // Litters - fetch individual entry
+        Route::get('/create', [App\Http\Controllers\PuppyController::class, 'showLitterCreateForm']);
+        // Litters - submit data
+        Route::post('/create', [App\Http\Controllers\PuppyController::class, 'createLitter']);
     });
 
     /* -- Testimonials -- */
