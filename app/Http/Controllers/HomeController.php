@@ -49,4 +49,13 @@ class HomeController extends Controller
         $path = public_path() . $url . '/' . $filename;
         if( File::exists( $path ) ) File::delete( $path );
     }
+
+    public function ctrAddValue (Request $request)
+    {
+        session([ 
+            'ctr' => $request->litter_number
+        ]);
+
+        return back();
+    }
 }
