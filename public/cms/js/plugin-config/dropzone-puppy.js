@@ -6,7 +6,7 @@
 
     var token = $('meta[name="csrf-token"]').attr('content');
     $('#dropzone-gallery').dropzone({
-        url: '/upload/puppy',
+        url: '/cms/upload/puppy',
         acceptedFiles: 'image/*',
         maxFileSize: 10, // MB
         addRemoveLinks: true,
@@ -25,8 +25,8 @@
             alert(message);
         },
         init: function() {
-            this.on('sending', function(file, xhr, formData) {
-                formData.append('_token', token);
+            this.on('sending', function(file, xhr, data) {
+                data.append('_token', token);
             });
             this.on('removedfile', function(file) {
                 var imageNameList = $('#image_name').val();
@@ -35,7 +35,7 @@
 
                 // Remove image from server folder
                 $.ajax({
-                    url: 'delete/puppy',
+                    url: '/cms/delete/puppy',
                     type: 'POST',
                     data: {
                         '_token': token,

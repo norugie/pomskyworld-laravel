@@ -84,17 +84,16 @@
                                 <td><a href="/cms/litters/{{ $litter->id }}">{{ $litter->litter_name }}</a></td>
                                 <td>{{ $litter->litter_desc }}</td>
                                 <td>{{ $litter->litter_dob->format('d M Y') }}</td>
-                                <td>{{ $litter->litter_breed }}</td>
                                 <td class="text-center">
-                                    <a href="/cms/litters/{{ $litter->id }}/update" class="btn btn-primary">
+                                    <a href="/cms/litters/{{ $litter->id }}/update" class="btn btn-success">
                                         <span class="icon text-white-50">
-                                            <i class="fas fa-plus"></i>
+                                            <i class="fas fa-edit"></i>
                                         </span>
                                         <span class="text">Update</span>
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <button class="btn btn-danger btn-delete-litter" data-id="{{ $parent->id }}" type="button">
+                                    <button class="btn btn-danger btn-delete-litter" data-id="{{ $litter->id }}" type="button">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-trash"></i>
                                         </span>
