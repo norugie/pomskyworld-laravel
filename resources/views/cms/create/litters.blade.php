@@ -60,7 +60,7 @@
                                     <i class="fas fa-venus"></i>
                                 </span>
                             </div>
-                            <select id="female_select" name="female_select" class="form-control clear-border custom-select" required>
+                            <select id="mother_select" name="mother_select" class="form-control clear-border custom-select" required>
                                 <option value="" disabled selected hidden>Mother options</option>
                                 @foreach($females as $female)
                                     <option value="{{ $female->id }}">{{ $female->family_name }}</option>
@@ -103,8 +103,8 @@
                 <div class="row mb-3">
                     <div class="col-lg-12">
                         <label class="label-emphasis" for="litter_info">Litter Information *</label>
-                        <textarea id="litter_info" name="litter_info" class="form-control clear-border-textarea @error('litter_dob') is-invalid @enderror" required>{{ old('litter_info') }}</textarea>
-                        <div class="invalid-feedback">@error('litter_dob'){{ $message }}@else You cannot leave this section empty. @enderror</div>
+                        <textarea id="litter_info" name="litter_info" class="form-control clear-border-textarea @error('litter_info') is-invalid @enderror" required>{{ old('litter_info') }}</textarea>
+                        <div class="invalid-feedback">@error('litter_info'){{ $message }}@else You cannot leave this section empty. @enderror</div>
                     </div>
                 </div>
                 <div class="row">

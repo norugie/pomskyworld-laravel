@@ -60,11 +60,55 @@ class PuppyController extends Controller
 
         $litter->save();
 
+        DB::table('family_litter')->insert([
+            [
+                'family_id' => $request->mother_select,
+                'ltter_id' => $litter->id
+            ],
+            [
+                'family_id' => $request->father_select,
+                'ltter_id' => $litter->id
+            ]
+        ]);
 
         session([ 
-            'ctr' => $request->litter_number
+            'ctr' => $request->litter_number,
+            'message' => 'An litter entry has been created successfully.'
         ]);
 
         return redirect('cms/litters/'. $litter->id .'/puppies/create');
+    }
+
+    public function createPuppy ( Int $id, Request $request )
+    {
+        $puppy = new Puppy();
+        echo $id . "<br>";
+        for($ctr = 1; $ctr <= session('ctr'); $ctr++){
+            $request->validate( 
+            [
+                'puppy_name_' . $ctr => 'required',
+                'puppy_info_' . $ctr => 'required'
+            ],
+            [
+                'puppy_name_' . $ctr . '.required' => 'You cannot leave this section empty.',
+                'puppy_info_' . $ctr . '.required' => 'You cannot leave this section empty.'
+            ]);
+            
+            $puppy->puppy_name = $request->input('puppy_name_' . $ctr);
+            $puppy->puppy_gender = $request->input('gender_select_' . $ctr);
+            $puppy->puppy_desc = $request->input('puppy_info_' . $ctr);
+            $puppy->litter_id = $id;
+
+            $puppy->save();
+        }
+
+        if(! session('message') ? $message = "A new set of puppies has been added to a litter." : $message = session('message'));
+
+        session([ 
+            'crud' => 'deactivate',
+            'status' => 'success',
+            'message' => $message
+        ]);
+
     }
 }
