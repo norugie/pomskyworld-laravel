@@ -16,7 +16,7 @@ class PuppyController extends Controller
 
         return view ( 'cms.litters',
         [
-            'litters' => Litter::all()
+            'litters' => Litter::where('litter_status', 'Active')->orderBy('id', 'DESC')->get()
         ]);
     }
 
@@ -113,5 +113,17 @@ class PuppyController extends Controller
         ]);
 
         return redirect('/cms/litters/');
+    }
+
+    public function deactivateLitter (Request $request)
+    {
+        Litter::where('id', $request->id)->update(['litter_status' => 'Inactive']);
+        Puppy::where('litter_id', $request->id)->update(['puppy_status' => 'Inactive']);
+
+        session([ 
+            'crud' => 'deactivate',
+            'status' => 'success',
+            'message' => 'A litter entry has been deleted successfully.'
+        ]);
     }
 }

@@ -97,6 +97,7 @@ Route::middleware(['auth'])->group(function() {
         Route::get('/{id}/puppies/create', [App\Http\Controllers\PuppyController::class, 'showPuppyCreateForm']);
         // Litters - submit data
         Route::post('/create', [App\Http\Controllers\PuppyController::class, 'createLitter']);
+        Route::post('/deactivate', [App\Http\Controllers\PuppyController::class, 'deactivateLitter']);
         Route::post('/{id}/puppies/create', [App\Http\Controllers\PuppyController::class, 'createPuppy']);
     });
 
