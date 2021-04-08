@@ -33,7 +33,7 @@
                         }
                     });
                     $.ajax({
-                        url: "{{ url('/cms/litter/deactivate') }}",
+                        url: "{{ url('/cms/litters/deactivate') }}",
                         type: "POST",
                         data: { id: id },
                         dataType: "html",
