@@ -4,6 +4,7 @@
 /storage/*.key
 /vendor
 /public/images/parents/*
+/public/images/puppies/*
 .env
 .env.backup
 .phpunit.result.cache
