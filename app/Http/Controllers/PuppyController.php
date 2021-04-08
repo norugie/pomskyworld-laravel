@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Family;
 use App\Models\Litter;
 use App\Models\Puppy;
@@ -63,26 +64,25 @@ class PuppyController extends Controller
         DB::table('family_litter')->insert([
             [
                 'family_id' => $request->mother_select,
-                'ltter_id' => $litter->id
+                'litter_id' => $litter->id
             ],
             [
                 'family_id' => $request->father_select,
-                'ltter_id' => $litter->id
+                'litter_id' => $litter->id
             ]
         ]);
 
         session([ 
-            'ctr' => $request->litter_number,
-            'message' => 'An litter entry has been created successfully.'
+            'ctr' => $request->litter_number
         ]);
 
-        return redirect('cms/litters/'. $litter->id .'/puppies/create');
+        return redirect('/cms/litters/'. $litter->id .'/puppies/create');
     }
 
     public function createPuppy ( Int $id, Request $request )
     {
         $puppy = new Puppy();
-        echo $id . "<br>";
+
         for($ctr = 1; $ctr <= session('ctr'); $ctr++){
             $request->validate( 
             [
@@ -102,13 +102,14 @@ class PuppyController extends Controller
             $puppy->save();
         }
 
-        if(! session('message') ? $message = "A new set of puppies has been added to a litter." : $message = session('message'));
+        session()->forget('ctr');
 
         session([ 
             'crud' => 'deactivate',
             'status' => 'success',
-            'message' => $message
+            'message' => 'A new set of puppies has been added to a litter.'
         ]);
 
+        return redirect('/cms/litters/');
     }
 }
