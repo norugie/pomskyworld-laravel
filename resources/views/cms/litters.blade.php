@@ -85,12 +85,27 @@
                                 <td>{{ $litter->litter_desc }}</td>
                                 <td>{{ $litter->litter_dob->format('d M Y') }}</td>
                                 <td class="text-center">
-                                    <a href="/cms/litters/{{ $litter->id }}/update" class="btn btn-success">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-edit"></i>
-                                        </span>
-                                        <span class="text">Update</span>
-                                    </a>
+                                    <div class="dropdown no-arrow mb-4">
+                                        <button class="btn btn-success dropdown-toggle" type="button"
+                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-edit"></i>
+                                            </span>
+                                            <span class="text">Update</span>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right animated--fade-in"
+                                            aria-labelledby="dropdownUpdateButton">
+                                            <a class="dropdown-item" href="/cms/litters/{{ $litter->id }}/update">
+                                                <i class="fas fa-edit fa-sm fa-fw mr-2 text-gray-600"></i>
+                                                Update litter info
+                                            </a>
+                                            <a class="dropdown-item" href="/cms/litters/{{ $litter->id }}/puppies/create">
+                                                <i class="fas fa-plus fa-sm fa-fw mr-2 text-gray-600"></i>
+                                                Add new puppies
+                                            </a>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td class="text-center">
                                     <button class="btn btn-danger btn-delete-litter" data-id="{{ $litter->id }}" type="button">

@@ -12,6 +12,8 @@ class PuppyController extends Controller
 {
     public function showLitterList ()
     {
+        if(session('ctr')) session()->forget('ctr');
+
         return view ( 'cms.litters',
         [
             'litters' => Litter::all()
@@ -81,8 +83,6 @@ class PuppyController extends Controller
 
     public function createPuppy ( Int $id, Request $request )
     {
-        $puppy = new Puppy();
-
         for($ctr = 1; $ctr <= session('ctr'); $ctr++){
             $request->validate( 
             [
@@ -94,6 +94,8 @@ class PuppyController extends Controller
                 'puppy_info_' . $ctr . '.required' => 'You cannot leave this section empty.'
             ]);
             
+            $puppy = new Puppy();
+
             $puppy->puppy_name = $request->input('puppy_name_' . $ctr);
             $puppy->puppy_gender = $request->input('gender_select_' . $ctr);
             $puppy->puppy_desc = $request->input('puppy_info_' . $ctr);
